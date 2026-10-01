@@ -1,392 +1,760 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweat</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>星ヶ浜キャンプ場</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+  <link rel="stylesheet" href="css/Top_style.css">
+  <link rel="stylesheet" href="css/hmenu.css" />
+  <link rel="stylesheet" href="css/event.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="images/camp_favicon_need/favicon.svg">
+  <link rel="icon" type="image/png" size="96x96" href="images/camp_favicon_need/android-chrome-96x96.png">
+  <link rel="icon" type="image/png" size="256x256" href="images/camp_favicon_need/android-chrome-256x256.png">
+  <link rel="apple-touch-icon" size="180x180" href="images/camp_favicon_need/apple-touch-icon-180x180.png">
+  <link rel="shortcut icon" href="images/camp_favicon_need/icon-32x32.png">
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mmm.quo.jp/camp/">
+  <meta property="og:site_name" content="星ヶ浜キャンプ場">
+  <meta property="og:title" content="星ヶ浜キャンプ場">
+  <meta property="og:description" content="山口県光市にある海と星が売りのキャンプ場">
+  <meta property="og:image:alt" content="海と星に包まれた誰でも楽しめるキャンプ場- 星ヶ浜キャンプ場">
+
+
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'xwy6mwz',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
 </head>
 
 <body>
+  <header>
+    <!--  ロゴ＆ナビゲーション ここに貼り付け-->
+    <div id="top" class="container">
+      <h1 class="logoH1">
+        <a href="index.html"><img src="images/logo_yellow.svg" width="450" height:255 alt="星ヶ浜キャンプ場" /></a>
+      </h1>
+      <button type="button" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="navigation">
+        <ul class="navUl">
+          <li class="navLi"><a href="index.html">この場所について</a></li>
+          <li class="navLi"><a href="facility.html">設備</a></li>
+          <li class="navLi"><a href="index.html#access">アクセス</a></li>
+          <li class="navLi"><a href="event.html">イベント情報</a></li>
+          <li class="navLi navLi5"><a href="reservation.html">予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <div id="loading">
-        <div class="spinner"></div>
-        <div class="loading-cover"></div>
+  <!-- ローディング画面 -->
+  <div class="loader">
+    <div class="logo">
+      <img src="./images/logo_yellow.svg" alt="星ヶ浜キャンプ場ロゴ">
+    </div>
+  </div>
+
+  <!-- heroここから-->
+  <section>
+    <div class="hero">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="images/slider_family2.webp" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Mv.star.webp" />
+          </div>
+          <div class="swiper-slide"><img src="images/slider_sunset.webp" /></div>
+        </div>
+        <div class="heroScroll">
+          <p>SCROLL</p>
+        </div>
+      </div>
+
+      <div class="hereBox">
+        <div class="heroTime">
+          <img src="images/camp_kikan 1.svg" alt="">
+        </div>
+        <div class="heroCatch">
+          <h2>素敵な時間を</h2>
+          <h2>海と星に包まれて</h2>
+        </div>
+      </div>
+
+      <div class="heroScroll_star">
+        <img src="./images/Hoshigahama_character3-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+      </div>
+
     </div>
 
-    <header>
-        <div class="header__Inner">
-            <div class="header__Inner-box">
-                <div class="nav">
-                    <div class="nav__Inner">
-                        <div class="logo">Never For Get</div>
-                        <ul>
-                            <li><a href="#Top">私たちについて</a></li>
-                            <li><a href="#Concept">こだわり</a></li>
-                            <li><a href="#Features">特徴</a></li>
-                            <li><a href="#Products">商品を見る</a></li>
-                        </ul>
-                    </div>
+
+  </section>
+  <!-- heroここまで-->
+
+  <main>
+    <div class="inner">
+
+      <!-- 天気予報 -->
+      <section>
+        <div class="weather">
+          <h3> 星ヶ浜キャンプ場 天気予報 </h3>
+          <div id="ww_6d9f6d806e4cb" v='1.3' loc='id'
+            a='{"t":"responsive","lang":"ja","sl_lpl":1,"ids":["wl6935"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+            More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_6d9f6d806e4cb_u"
+              target="_blank">東京
+              天気 10 日間</a></div>
+          <script async src="https://app3.weatherwidget.org/js/?id=ww_6d9f6d806e4cb"></script>
+        </div>
+      </section>
+
+      <!-- イベント -->
+      <section>
+        <div class="event_Inner">
+
+          <div class="event-title">
+            <h2>
+              イベント情報
+            </h2>
+
+            <div class="flag1">
+              <img src="./Top_event_page/event_hata 2.svg" alt="">
+            </div>
+
+            <div class="flag2">
+              <img src="./Top_event_page/event_hata 2.svg" alt="">
+            </div>
+          </div>
+
+
+          <div class="event_Box">
+            <div class="event_Item , zoom-box">
+              <a href="./event.html#section3">
+                <img class="c-bnr zoom" src="./Top_event_page/photo_ banner_square.webp" alt="フォトコンテストバナー">
+              </a>
+            </div>
+
+            <div class="event_Item , zoom-box">
+              <a href="./event.html#section1">
+                <img class="c-bnr zoom" src="./Top_event_page/sauna banner_square.webp" alt="サウナ">
+              </a>
+            </div>
+
+            <div class="event_Item , zoom-box">
+              <a href="./event.html#section2">
+                <img class="c-bnr zoom" src="./Top_event_page/camp_event banner_square.webp" alt="キャンプイベント">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section>
+        <div class="Concept_Inner">
+
+          <div class="sunset">
+
+            <!-- タイトル -->
+            <div class="Concept_title_BigBox">
+              <div class="Concept_title_Box">
+
+                <div class="Concept_title_1 Concept_title ">
+                  <h3 class="Concept_title_1 inview fadeIn">絶景のキャンプ場</h3>
+                  <div class="Concept_title_1_back">
+                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
+                  </div>
+                </div>
+
+                <div class="Concept_title_2 Concept_title">
+                  <h3 class="Concept_title_2 inview fadeIn">心ほどける</h3>
+                  <div class="Concept_title_2_back">
+                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
+                  </div>
+
+                </div>
+
+                <div class="Concept_title_3 Concept_title">
+                  <h3 class="Concept_title_3 inview fadeIn">瀬戸内海を望む</h3>
+                  <div class="Concept_title_3_back">
+                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- sunset image -->
+              <div class="sunset_img">
+                <div class="blur">
+                  <img src="./Top_Concept/Top_sunset.webp" alt="夕日">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="sea">
+            <div class="Concept_sea inview fadeIn">
+              <img src="./Top_Concept/Top_sea.webp" alt="海">
+            </div>
+
+            <div class="Concept_text_box">
+              <div class="Concept_texts">
+
+                <div class="Concept_text Concept_text1">
+                  <p>ここは山口県光市安西村にある<br><span class="text_strong">『星ヶ浜キャンプ場』</span></p>
+                </div>
+
+                <div class="Concept_text">
+                  <p>瀬戸内海に臨む日本でも<br class="hoshi">有数の広さを誇る<br>キャンプ場で眺めも抜群</p>
+                </div>
+
+                <div class="Concept_text">
+                  <p>朝日に輝く海 夕暮れに染まる空<br class="hoshi">そして夜空いっぱいに瞬く星々<br class="hidden-pc">
+                    ゆっくりと流れる時間が<br class="hoshi">日常を忘れさせ心を満たしてくれます
+                  </p>
+                </div>
+
+                <div class="Concept_text Concept_text1">
+                  <p>あなたも忘れられない<br>景色に出会いに来ませんか</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="star">
+            <div class="title_star ">
+              <h3>私たちはどんな方でも安心して、<br>
+                楽しめるキャンプ場を<br class="hoshi">目指しております</h3>
+            </div>
+
+            <div class="star_img">
+              <canvas id="skyCanvas" width="950" height="950">
+                <img src="./Top_Concept/star.png" alt="星">
+              </canvas>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="Features ">
+        <div class="Features_title">
+          <div class="Features_star">
+            <img src="./images/Hoshigahama_character6-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+          </div>
+          <h2>星ヶ浜キャンプ場<br class="Features_hidden">の特徴</h2>
+        </div>
+
+
+        <div class="feature  inview fadeIn_right ">
+          <div class="featureTop">
+            <div class="featureImage">
+              <img src="./Top_tokutixyou_webp/family camp 1.webp" alt="特徴セクションキャンプ写真">
+              <h3 class="featureTitle">
+                バラエティに富んだ設備
+              </h3>
+            </div>
+          </div>
+          <div class="featureText">
+            <p>山口市から車で約１時間。</p>
+            <p>車の乗り入れ可能なオートキャンプ場でバラエティ豊かな設備があります。</p>
+            <p>皆様のお越しをお待ちしております。</p>
+          </div>
+          <div class="featureIrasuto">
+            <img src="./Top_tokutixyou_PNG/Top_Concept_tento.png" alt="">
+          </div>
+        </div>
+
+
+        <div class="feature2 inview fadeIn_left ">
+          <div class="featureTop2">
+            <div class="featureImage2">
+              <img src="./Top_tokutixyou_webp/solo 1.webp" alt="">
+              <h3 class="featureTitle2">幅広いニーズに対応</h3>
+            </div>
+          </div>
+          <div class="featureText featureText2">
+            <p>星ケ浜キャンプ場では、ソロでもグループでもお楽しみいただけます。</p>
+            <p>24時間スタッフは常駐しておりますので、困ったことなどはお気軽にお声掛けください。</p>
+          </div>
+          <div class="featureIrasuto2">
+            <img src="./Top_tokutixyou_PNG/Top_Concept_fire.png" alt="">
+          </div>
+
+        </div>
+
+        <div class="feature3 inview fadeIn_right ">
+          <div class="featureTop">
+            <div class="featureImage3">
+              <img src="./Top_tokutixyou_webp/1view.jpeg 1.webp" alt="">
+              <h3 class="featureTitle3">絶景のキャンプ場</h3>
+            </div>
+          </div>
+          <div class="featureText featureText3">
+            <p>星ケ浜キャンプ場は、浜辺に隣接する広々とした開放感と、丁寧に整備された公園のようなオートキャンプ場です。</p>
+            <p>雄大な自然がおりなす波の音を聞きながら、日中は浜辺の下、太陽を浴び、夜は目の前いっぱいに広がる星空の下で、心と体を癒す。</p>
+            <p>そんな非日常の空間を演出します。</p>
+          </div>
+          <div class="featureIrasuto3">
+            <img src="./Top_ahirai/star 1.svg" alt="">
+          </div>
+
+        </div>
+
+
+      </section>
+
+      <section>
+
+        <div class="facility_title">
+
+          <div class="facility_star">
+            <img src="./images/Hoshigahama_character5-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+          </div>
+
+          <h2>主な設備</h2>
+
+        </div>
+
+
+        <div class="facility_back">
+          <div class="facility_box">
+
+            <!-- コテージ -->
+            <div class="facility_item">
+              <div class="facility_img">
+
+                <a href="facility.html#facilityCard4">
+                  <figure class="c-bnr zoom">
+                    <img src="./Top_setubi/cottge.webp" alt="コテージ">
+                  </figure>
+                </a>
+              </div>
+
+              <div class="facility_item_title">
+                <h4>コテージ</h4>
+              </div>
+
+              <div class="facility_item_text">
+                <p> 冷蔵庫・エアコン完備で快適に過ごせる<br>
+                  ロフト付きコテージです。<br>（定員５名）</p>
+              </div>
+            </div>
+
+
+
+            <!-- サウナ -->
+            <div class="facility_item">
+              <div class="facility_img">
+                <figure class="c-bnr zoom">
+                  <a href="facility.html#facilityCard6">
+                    <img src="./Top_setubi/sauna .webp" alt="サウナ">
+                  </a>
+                </figure>
+              </div>
+
+              <div class="facility_item_title">
+                <h4>フィンランド式サウナ</h4>
+              </div>
+
+              <div class="facility_item_text">
+                <p> 本格的なフィンランド式サウナです。<br>セルフロウリュウでお楽しみいただけます。<br>（定員４名）</p>
+              </div>
+
+            </div>
+            <div class="facility_item">
+
+
+
+              <!-- オートキャンプ場　-->
+              <div class="facility_img">
+                <figure class="c-bnr zoom">
+                  <a href="facility.html#facilityCard5">
+                    <img src="./Top_setubi/autocamp.webp" alt="オートキャンプ場">
+                  </a>
+                </figure>
+              </div>
+
+              <div class="facility_item_title">
+                <h4>オートキャンプ場</h4>
+              </div>
+
+              <div class="facility_item_text">
+                <p> テントサイトのすぐ横に車を駐車できる<br>便利で快適なキャンプスタイルです。</p>
+              </div>
+            </div>
+
+
+            <!-- 売店 -->
+            <div class="facility_item">
+
+              <div class="facility_img">
+                <figure class="c-bnr zoom">
+                  <a href="facility.html#facilityCard2">
+                    <img src="./Top_setubi/store.webp" alt="売店">
+                  </a>
+                </figure>
+              </div>
+
+              <div class="facility_item_title">
+                <h4>売店</h4>
+              </div>
+
+              <div class="facility_item_text">
+                <p> キャンプに必要な用品や食料品をご用意しています。<br>
+                  お気軽にお立ち寄りください。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="button">
+            <a href="facility.html">
+              <p>設備紹介ページへ</p>
+            </a>
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+      <section>
+        <div class="money_title">
+          <div class="money_star">
+            <img src="./images/Hosigahama_character2-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+          </div>
+          <h2>料金表</h2>
+        </div>
+        <div class="price">
+          <h3 class="priceTableTitle">電源付きオートサイト</h3>
+          <div class="priceTable">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>区画</th>
+                  <th>宿泊期間</th>
+                  <th>通常日</th>
+                  <th>通常日以外</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tdTitle" rowspan="2">オートサイト<br />A/B/C</td>
+                  <td>1区画1泊</td>
+                  <td>4,000円</td>
+                  <td>4,800円</td>
+                </tr>
+                <tr>
+                  <td>1区画 日帰り</td>
+                  <td>2,000円</td>
+                  <td>2,400円</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle" rowspan="2">オートサイト<br />T</td>
+                  <td>1区画1泊</td>
+                  <td>5,200円</td>
+                  <td>6,000円</td>
+                </tr>
+                <tr>
+                  <td>1区画 日帰り</td>
+                  <td>2,600円</td>
+                  <td>3,000円</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="facilityMap">
+
+          <div class="map_star">
+            <img src="./images/Hoshigahama_character4-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+          </div>
+          <h2 class="facilityMapTitle map_title">キャンプ場 Map</h2>
+
+          <div class="facilityMapImg">
+            <img src="./images/map.webp" alt="マップ">
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="access">
+        <div class="access_title">
+          <div class="access_star">
+            <img src="./images/Hoshigahama_character7-01.webp" alt="星ヶ浜キャンプ場キャラクター">
+          </div>
+          <h2>アクセス</h2>
+        </div>
+
+
+        <div class="accessMapWrap">
+          <div class="accessMap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29446.015158222788!2d131.91059263492477!3d33.97993635260659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3544e20000344917%3A0x5da28270448c6ede!2z44KP44GL44Gw5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1783994620147!5m2!1sja!2sjp"
+              style="border: 0" allowfullscreen="" loading="lazy" -->
+            </iframe>
+          </div>
+        </div>
+
+
+        <div class="access_box">
+
+          <div class="access01_item access01_item_star">
+            <p class="access01_head">本州方面</p>
+            <p class="access01_neck">熊毛IC
+              <span class="yori">より</span>
+              <span class="access_way">車</span>
+              <span class="yori">で</span>
+            </p>
+            <p class="access01_body">
+              約
+              <span class="number">18</span>
+              分
+            </p>
+            <span class="p-access01__notes">
+              （28km）
+            </span>
+          </div>
+
+
+          <div class="access01_item">
+            <p class="access01_head">九州方面</p>
+            <p class="access01_neck">徳山東IC
+              <span class="yori">より</span>
+              <span class="access_way">車</span>
+              <span class="yori">で</span>
+            </p>
+            <p class="access01_body">
+              約
+              <span class="number">13</span>
+              分
+            </p>
+            <span class="p-access01__notes">
+              （11km）
+            </span>
+          </div>
+
+
+          <div class="access01_item">
+            <p class="access01_head">JR山陽本線 </p>
+            <p class="access01_neck">光駅
+              <span class="yori">より</span>
+              <span class="access_way">徒歩</span>
+              <span class="yori">で</span>
+            </p>
+            <p class="access01_body">
+              約
+              <span class="number">11</span>
+              分
+            </p>
+            <span class="p-access01__notes">
+              （1km）
+            </span>
+          </div>
+
+
+          <div class="access01_item access01_item_starleft">
+            <p class="access01_head">山口県</p>
+            <p class="access01_neck">山口市
+              <span class="yori">より</span>
+              <span class="access_way">車</span>
+              <span class="yori">で</span>
+            </p>
+
+            <p class="access01_body">
+              約
+              <span class="number">60</span>
+              分
+            </p>
+            <span class="p-access01__notes">
+              （85km）
+            </span>
+          </div>
+        </div>
+
+
+
+
+        <div class="access_Box">
+
+          <div class="access_Box_Inner">
+
+
+            <div class="access_Inner">
+              <div class="access_heading">
+                <h3>住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所<span class="access_hidden">：</span></h3>
+              </div>
+              <div class="access_text">
+                <p>〒743-0001 ⼭⼝県光市安⻄村2547</p>
+              </div>
+            </div>
+
+            <div class="access_Inner">
+              <div class="access_heading">
+                <h3>電話番号<span class="access_hidden">：</span></h3>
+              </div>
+              <div class="access_text">
+                <p>0833-68-1234</p>
+              </div>
+            </div>
+
+
+            <div class="access_Inner">
+              <div class="access_heading">
+                <h3>営業期間<span class="access_hidden">：</span></h3>
+              </div>
+              <div class="access_text">
+                <p>2026年4⽉26⽇〜11⽉4⽇</p>
+              </div>
+            </div>
+
+
+            <div class="access_Inner">
+              <div class="access_heading">
+                <h3>営業時間<span class="access_hidden">：</span></h3>
+              </div>
+              <div class="access_text">
+
+                <div class="Welcome">
+                  <div>
+                    <p>ウェルカムハウス<br class="access_hidden">(受付・総合案内)</p>
+                  </div>
+
+                  <div>
+                    <p>
+                      9:00〜17:00
+                    </p>
+                  </div>
                 </div>
 
 
+                <div class="store">
+                  <div>
+                    <p>レンタル棟・売店</p>
+                  </div>
 
-
-                <nav class="nav__iphone">
-
-                    <div class="hamburger" id="btn01">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <ul class="iphone__menu">
-                        <li><a href="#Top">私たちについて</a></li>
-                        <li><a href="#Concept">こだわり</a></li>
-                        <li><a href="#Features">特徴</a></li>
-                        <li><a href="#Products">商品を見る</a></li>
-                    </ul>
-                </nav>
-
-                <div class="catch">
-                    <h1>あなたの、<br>相棒になる１着。</h1>
+                  <div>
+                    <p>
+                      8:30〜17:00
+                    </p>
+                  </div>
                 </div>
 
+              </div>
             </div>
+
+          </div>
         </div>
-    </header>
+      </section>
 
 
-    <div class="slider_box">
-        <!-- スライドショー -->
-        <div class="slider">
-            <div class="header-fv slide">
-                <!-- <img src="./images/Fv-1.png" alt="Fv-1"> -->
-            </div>
-            <div class="header-fv slide">
-                <!-- <img src="./images/Fv-2.png" alt="Fv-2"> -->
-            </div>
-            <div class="header-fv slide">
-                <!-- <img src="./images/Fv-3.png" alt="Fv-3"> -->
-            </div>
-        </div>
     </div>
+  </main>
 
 
-    <main>
-        <section class="concept" id="Concept">
-
-            <div class="concept__Inner">
-                <div class="concept__img fadein">
-                    <img src="./images/concept-1.png" alt="制作風景">
-                </div>
-                <div class="concept__img fadein">
-                    <img src="./images/concept-2.png" alt="店内風景">
-                </div>
-                <div class="concept__img fadein">
-                    <img src="./images/concept-3.png" alt="着用写真">
-                </div>
-                <div class="concept__img fadein">
-                    <img src="./images/concept-4.png" alt="生地">
-                </div>
-
-                <div class="concept__box fadeIN">
-                    <div class="concept__tit">
-                        <h2>Concept</h2>
-
-                    </div>
-                    <div class="concept__text">
-                        <p>私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて
-                        </p>
-                    </div>
-
-                    <div class="btn">
-                        <span>商品を見る</span>
-                        <svg class="concept__icon" width="19" height="9" viewBox="0 0 19 9"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
-                        </svg>
-                    </div>
-                </div>
+  <footer>
+    <div class="footerInner">
+      <div class="footerContainer">
+        <div class="footerLeft">
+          <h3 class="footerLogoH3">
+            <a href="index.html">
+              <img src="images/logo_yellow.svg" alt="星ヶ浜キャンプ場" />
+            </a>
+          </h3>
+          <div class="footerIcons">
+            <div class="footerIcon1">
+              <a href="#">
+                <img src="./images/insta_icon.svg" alt="インスタ" />
+              </a>
             </div>
-        </section>
-
-
-        <section class="Features" id="Features">
-
-            <div class="features_container">
-                <div class="features_box">
-                    <div class="Features__title">
-                        <h2>Features</h2>
-                        <p>特徴</p>
-                    </div>
-                </div>
-
-                <div class="feature__back">
-                    <div class="feature feature-1">
-
-                        <div class="feature__img">
-                            <img src="./images/feature__img-1.png" alt="生地のこだわり">
-                        </div>
-
-                        <div class="feature__texts">
-                            <div class="tit">
-                                <h3>特徴です。</h3>
-                                <span class="number">01</span>
-
-                            </div>
-
-                            <div class="feature__text">
-                                <p>
-                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                </p>
-                            </div>
-                        </div>
-                    </div>　
-
-                    <div class="feature2__back">
-                        <div class="feature feature-2">
-                            <div class="feature__img">
-                                <img src="./images/feature__img-2.png" alt="生地のこだわり">
-
-                            </div>
-
-                            <div class="feature__texts">
-                                <div class="tit">
-                                    <h3>特徴です。</h3>
-                                </div>
-
-                                <div class="feature__text feature__text-2">
-                                    <p>
-                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                    </p>
-                                    <span class="number number-2">02</span>
-
-                                </div>
-                            </div>
-                        </div>　
-                    </div>
-
-
-                    <div class="feature feature-3">
-                        <div class="feature__img">
-                            <img src="./images/feature__img-3.png" alt="生地のこだわり">
-                        </div>
-                        <div class="feature__texts">
-                            <div class="tit">
-                                <h3>特徴です。</h3>
-                            </div>
-
-                            <div class="feature__text feature__text-3">
-                                <p>
-                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                </p>
-                                <span class="number number-3">03</span>
-
-                            </div>
-                        </div>
-                    </div>　
-                </div>
+            <div class="footerIcon2">
+              <a href="#">
+                <img src="./images/line_icon.svg" alt="ライン" />
+              </a>
             </div>
-
-        </section>
-
-        <section class="voice">
-            <div class="voice__Inner">
-                <div class="voice-left">
-                    <div class="voice_box">
-                        <div class="voice__title">
-                            <h2>Voice</h2>
-                            <p>購入者の声</p>
-                        </div>
-                        <p class="voice__text">
-                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-
-                        <div class="voice__btn">
-                            <span>商品を見る</span>
-                            <svg class="voice__icon" width="19" height="9" viewBox="0 0 19 9"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="voice-right">
-                    <div class="voice__person">
-                        <article class="post">
-                            <div class="post__img">
-                                <img src="./images/voice-1.png" alt="購入者の声">
-                            </div>
-                            <div class="post__text">
-                                <p>これ以外は考えられない</p>
-                            </div>
-                        </article>
-
-                        <article class="post">
-                            <div class="post__img">
-                                <img src="./images/voice-2.png" alt="購入者の声">
-                            </div>
-                            <div class="post__text">
-                                <p>これ以外は考えられない</p>
-                            </div>
-                        </article>
-
-                        <article class="post">
-                            <div class="post__img">
-                                <img src="./images/voice-3.png" alt="購入者の声">
-                            </div>
-                            <div class="post__text">
-                                <p>これ以外は考えられない</p>
-                            </div>
-                        </article>
-
-                        <article class="post">
-                            <div class="post__img">
-                                <img src="./images/voice-4.png" alt="購入者の声">
-                            </div>
-                            <div class="post__text">
-                                <p>これ以外は考えられない</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="Products" id="Products">
-            <div class="Products__Inner">
-                <div class="Products_box">
-                    <div class="Products__title">
-                        <h2>Products</h2>
-                        <p>製品</p>
-                    </div>
-                </div>
-
-                <div class="Products__area">
-                    <div class="products__big-img">
-                        <img src="./images/product-1.png" alt="グレースウェット">
-                    </div>
-
-                    <div class="products">
-                        <div class="products-item">
-                            <img src="./images/product-1.png" alt="">
-                        </div>
-
-                        <div class="products-item">
-                            <img src="./images/product-2.png" alt="">
-                        </div>
-
-                        <div class="products-item">
-                            <img src="./images/product-3.png" alt="">
-                        </div>
-
-                        <div class="products-item">
-                            <img src="./images/product-4.png" alt="">
-                        </div>
-
-                        <div class="products-item">
-                            <img src="./images/product-5.png" alt="">
-                        </div>
-
-                        <div class="products-item">
-                            <img src="./images/product-6.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="Product_btn">
-                    <div class="Products__btn">
-                        <span>商品を見る</span><svg class="icon" width="19" height="9" viewBox="0 0 19 9"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <div class="wrapper">
-            <ul class="sweat-slider">
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-1.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-2.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-3.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-4.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-5.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-6.png" alt="無限ループ">
-                </li>
-            </ul>
-
-            <ul class="sweat-slider">
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-1.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-2.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-3.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-4.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-5.png" alt="無限ループ">
-                </li>
-                <li class="sweat-slide">
-                    <img src="./images/slider/silder-6.png" alt="無限ループ">
-                </li>
-            </ul>
+          </div>
         </div>
-    </main>
+        <nav class="footerNav">
+          <ul class="footerNavUl">
+            <li class="footerNavLi">
+              <a href="index.html">この場所について</a>
+            </li>
+            <li class="footerNavLi"><a href="facility.html">設備</a></li>
+            <li class="footerNavLi"><a href="index.html#access">アクセス</a></li>
+            <li class="footerNavLi"><a href="event.html">イベント情報</a></li>
+            <li class="footerNavLi"><a href="reservation.html">予約</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="copyright">
+        <small>&copy; 2026 Hoshigahama Campsite Co., Ltd.</small>
+      </p>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="footer__Inner">
-            <div class="footer__container">
-                <div class="footer__logo">
-                    <h2>Never For Get
-                        <div class="copyright">
-                            <small>© Never For Get. All Rights Reserved.</small>
-                        </div>
-                    </h2>
+  <!-- 予約ボタン -->
+  <div id="to_top" class="to_top">
+    <a href="reservation.html">
+      <div class="to_top_image1">
+        <img src="images/character.webp" alt="" />
+      </div>
+      <div class="to_top_image2">
+        <img src="images/Hosigahama_character2-01.webp" alt="" />
+      </div>
+      <div class="to_top_text">
+        <p>ご予約は<br class="hidden-pc">こちら</p>
+      </div>
+    </a>
+  </div>
 
-                </div>
-
-                <div class="footer__item">
-                    <a href="#Top">私たちについて</a>
-                    <a href="#Concept">こだわり</a>
-                    <a href="#Features">特徴</a>
-                    <a href="#Products">商品を見る</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/jquery.inview.min.js"></script>
+  <script src="./js/script.js"></script>
 
 
 </body>
