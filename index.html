@@ -4,339 +4,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donut</title>
+    <title>Sweat</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- font -->
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'abo4lnc',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-    <script>
-        (function (d) {
-            var config = {
-                kitId: 'abo4lnc',
-                scriptTimeout: 3000,
-                async: true
-            },
-                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-        })(document);
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
     <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-cover"></div>
     </div>
 
     <header>
-        <div class="headerInner" id="header">
-            <h1 class="logo">
-                <img src="./images/donut-logo.png" alt="donutpatada ロゴ">
-            </h1>
+        <div class="header__Inner">
+            <div class="header__Inner-box">
+                <div class="nav">
+                    <div class="nav__Inner">
+                        <div class="logo">Never For Get</div>
+                        <ul>
+                            <li><a href="#Top">私たちについて</a></li>
+                            <li><a href="#Concept">こだわり</a></li>
+                            <li><a href="#Features">特徴</a></li>
+                            <li><a href="#Products">商品を見る</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="hamburger" id="btn01">
-                <span></span>
-                <span></span>
-            </div>
 
-            <div class="overlay"></div>
 
-            <nav>
-                <div class="menu-container">
-                    <ul class="hamburger__menu">
-                        <li><a href="#Concept">私たちの想い</a></li>
-                        <li><a href="#Commitment">ドーナツへのこだわり</a></li>
-                        <li><a href="#Q&A">よくある質問</a></li>
+
+                <nav class="nav__iphone">
+
+                    <div class="hamburger" id="btn01">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="iphone__menu">
+                        <li><a href="#Top">私たちについて</a></li>
+                        <li><a href="#Concept">こだわり</a></li>
+                        <li><a href="#Features">特徴</a></li>
+                        <li><a href="#Products">商品を見る</a></li>
                     </ul>
-                </div>
-            </nav>
-        </div>
+                </nav>
 
-
-        <div class="catch">
-            <h2>
-                DONUT<br>
-                is<br>
-                HAPPY!
-            </h2>
-
-            <div class="catch__fv">
-                <div class="catch__fv-donut">
-                    <img src="./images/fv-1.png" alt="FV ドーナツ画像">
-                    <div class="catch__fv-donut-circle">
-                        <img src="./images/FV_cricle.webp" alt="">
-                    </div>
+                <div class="catch">
+                    <h1>あなたの、<br>相棒になる１着。</h1>
                 </div>
 
-
-                <div class="scroll-btn">
-                    <img src="./images/fv-scroll.svg" alt="FV スクロール誘導">
-                    <div class="scroll-btn-circle">
-                        <img src="./images/donut_circle.webp" alt="">
-                    </div>
-                </div>
             </div>
         </div>
     </header>
 
 
-    <section class="Imagine" id="Concept">
-        <div class="Imagine__inner">
-            <h3>Imagine</h3>
-            <p>ドーナツで<br>
-                世界中を幸せに
-            </p>
-
-            <div class="Imagine__person1 fadein">
-                <img src="./images/eating-1.png" alt="ドーナツを食べている人">
+    <div class="slider_box">
+        <!-- スライドショー -->
+        <div class="slider">
+            <div class="header-fv slide">
+                <!-- <img src="./images/Fv-1.png" alt="Fv-1"> -->
             </div>
-
-            <div class="Imagine__person2 fadein">
-                <img src="./images/eating-2.png" alt="ドーナツを食べている人">
+            <div class="header-fv slide">
+                <!-- <img src="./images/Fv-2.png" alt="Fv-2"> -->
             </div>
-
-            <div class="Imagine__donut1 ">
-                <img src="./images/donut_right.png" alt="ドーナツ">
+            <div class="header-fv slide">
+                <!-- <img src="./images/Fv-3.png" alt="Fv-3"> -->
             </div>
-
-            <div class="Imagine__donut2 ">
-                <img src="./images/donut_left.png" alt="ドーナツ">
-            </div>
-
         </div>
-    </section>
+    </div>
 
-    <section class="Commitment" id="Commitment">
-        <h3>Commitment</h3>
-        <div class="swiper_container">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_1.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
+    <main>
+        <section class="concept" id="Concept">
+
+            <div class="concept__Inner">
+                <div class="concept__img fadein">
+                    <img src="./images/concept-1.png" alt="制作風景">
+                </div>
+                <div class="concept__img fadein">
+                    <img src="./images/concept-2.png" alt="店内風景">
+                </div>
+                <div class="concept__img fadein">
+                    <img src="./images/concept-3.png" alt="着用写真">
+                </div>
+                <div class="concept__img fadein">
+                    <img src="./images/concept-4.png" alt="生地">
+                </div>
+
+                <div class="concept__box fadeIN">
+                    <div class="concept__tit">
+                        <h2>Concept</h2>
+
+                    </div>
+                    <div class="concept__text">
+                        <p>私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて私たちについて
+                        </p>
                     </div>
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_2.png" alt="チョコドーナツ">
+                    <div class="btn">
+                        <span>商品を見る</span>
+                        <svg class="concept__icon" width="19" height="9" viewBox="0 0 19 9"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="Features" id="Features">
+
+            <div class="features_container">
+                <div class="features_box">
+                    <div class="Features__title">
+                        <h2>Features</h2>
+                        <p>特徴</p>
+                    </div>
+                </div>
+
+                <div class="feature__back">
+                    <div class="feature feature-1">
+
+                        <div class="feature__img">
+                            <img src="./images/feature__img-1.png" alt="生地のこだわり">
+                        </div>
+
+                        <div class="feature__texts">
+                            <div class="tit">
+                                <h3>特徴です。</h3>
+                                <span class="number">01</span>
+
                             </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
+
+                            <div class="feature__text">
+                                <p>
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
                             </div>
-                        </article>
+                        </div>
+                    </div>　
+
+                    <div class="feature2__back">
+                        <div class="feature feature-2">
+                            <div class="feature__img">
+                                <img src="./images/feature__img-2.png" alt="生地のこだわり">
+
+                            </div>
+
+                            <div class="feature__texts">
+                                <div class="tit">
+                                    <h3>特徴です。</h3>
+                                </div>
+
+                                <div class="feature__text feature__text-2">
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <span class="number number-2">02</span>
+
+                                </div>
+                            </div>
+                        </div>　
                     </div>
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_3.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_4.png" alt="チョコドーナツ">
+                    <div class="feature feature-3">
+                        <div class="feature__img">
+                            <img src="./images/feature__img-3.png" alt="生地のこだわり">
+                        </div>
+                        <div class="feature__texts">
+                            <div class="tit">
+                                <h3>特徴です。</h3>
                             </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_5.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
+                            <div class="feature__text feature__text-3">
+                                <p>
+                                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                                <span class="number number-3">03</span>
 
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_1.png" alt="チョコドーナツ">
                             </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_2.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_3.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_4.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <article class="slide">
-                            <div class="slide__img">
-                                <img src="./images/slide_donut_5.png" alt="チョコドーナツ">
-                            </div>
-                            <div class="text-area">
-                                <h4>チョコドーナツ</h4>
-                                <p>チョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドーナツチョコドー</p>
-                            </div>
-                        </article>
-                    </div>
-
+                        </div>
+                    </div>　
                 </div>
             </div>
 
-            <div class="swiper-button">
-                <button class="my-prev" type="button"></button>
-                <button class="my-next" type="button"></button>
+        </section>
+
+        <section class="voice">
+            <div class="voice__Inner">
+                <div class="voice-left">
+                    <div class="voice_box">
+                        <div class="voice__title">
+                            <h2>Voice</h2>
+                            <p>購入者の声</p>
+                        </div>
+                        <p class="voice__text">
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+
+                        <div class="voice__btn">
+                            <span>商品を見る</span>
+                            <svg class="voice__icon" width="19" height="9" viewBox="0 0 19 9"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="voice-right">
+                    <div class="voice__person">
+                        <article class="post">
+                            <div class="post__img">
+                                <img src="./images/voice-1.png" alt="購入者の声">
+                            </div>
+                            <div class="post__text">
+                                <p>これ以外は考えられない</p>
+                            </div>
+                        </article>
+
+                        <article class="post">
+                            <div class="post__img">
+                                <img src="./images/voice-2.png" alt="購入者の声">
+                            </div>
+                            <div class="post__text">
+                                <p>これ以外は考えられない</p>
+                            </div>
+                        </article>
+
+                        <article class="post">
+                            <div class="post__img">
+                                <img src="./images/voice-3.png" alt="購入者の声">
+                            </div>
+                            <div class="post__text">
+                                <p>これ以外は考えられない</p>
+                            </div>
+                        </article>
+
+                        <article class="post">
+                            <div class="post__img">
+                                <img src="./images/voice-4.png" alt="購入者の声">
+                            </div>
+                            <div class="post__text">
+                                <p>これ以外は考えられない</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <section class="Parallax">
-        <div class="Parallax_bg">
-
-            <div class="Parallax__donut-box">
-                <div class="Parallax_donut donut-1">
-                    <img src="./images/slide_donut_1.png" alt="ホワイトチョコドーナツ">
+        <section class="Products" id="Products">
+            <div class="Products__Inner">
+                <div class="Products_box">
+                    <div class="Products__title">
+                        <h2>Products</h2>
+                        <p>製品</p>
+                    </div>
                 </div>
 
-                <div class="Parallax_donut donut-2">
-                    <img src="./images/donut_left.png" alt="食べかけドーナツ">
-                </div>
-                <div class="Parallax_donut donut-3">
-                    <img src="./images/parallax-donut.png" alt="アーモンドチョコドーナツ">
+                <div class="Products__area">
+                    <div class="products__big-img">
+                        <img src="./images/product-1.png" alt="グレースウェット">
+                    </div>
+
+                    <div class="products">
+                        <div class="products-item">
+                            <img src="./images/product-1.png" alt="">
+                        </div>
+
+                        <div class="products-item">
+                            <img src="./images/product-2.png" alt="">
+                        </div>
+
+                        <div class="products-item">
+                            <img src="./images/product-3.png" alt="">
+                        </div>
+
+                        <div class="products-item">
+                            <img src="./images/product-4.png" alt="">
+                        </div>
+
+                        <div class="products-item">
+                            <img src="./images/product-5.png" alt="">
+                        </div>
+
+                        <div class="products-item">
+                            <img src="./images/product-6.png" alt="">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="Parallax_donut donut-4">
-                    <img src="./images/slide_donut_3.png" alt="チョコドーナツ">
+                <div class="Product_btn">
+                    <div class="Products__btn">
+                        <span>商品を見る</span><svg class="icon" width="19" height="9" viewBox="0 0 19 9"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.5 9L13.075 7.6L15.175 5.5H0V3.5H15.175L13.1 1.4L14.525 0L19 4.5L14.5 9Z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
+        </section>
+
+        <div class="wrapper">
+            <ul class="sweat-slider">
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-1.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-2.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-3.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-4.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-5.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-6.png" alt="無限ループ">
+                </li>
+            </ul>
+
+            <ul class="sweat-slider">
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-1.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-2.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-3.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-4.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-5.png" alt="無限ループ">
+                </li>
+                <li class="sweat-slide">
+                    <img src="./images/slider/silder-6.png" alt="無限ループ">
+                </li>
+            </ul>
         </div>
-    </section>
-
-    <section class="QA" id="Q&A">
-        <h3>Q&A</h3>
-
-        <div class="accordion_container">
-            <button class="accordion">
-                <div class="Q">
-                    <span>Q</span>
-                    <p>ドーナツの種類は、<br class="iphone-apper">何個くらいありますか？</p>
-                </div>
-
-                <div class="A">
-                    <span>A</span>
-                    <p>合計30種類ございます。<br>チョコからスタンダートまで幅広い味をご予約しております。</p>
-                </div>
-            </button>
-
-            <button class="accordion">
-                <div class="Q">
-                    <span>Q</span>
-                    <p>ドーナツの種類は、<br class="iphone-apper">何個くらいありますか？</p>
-                </div>
-
-                <div class="A">
-                    <span>A</span>
-                    <p>合計30種類ございます。<br>チョコからスタンダートまで幅広い味をご予約しております。</p>
-                </div>
-            </button>
-
-            <button class="accordion">
-                <div class="Q">
-                    <span>Q</span>
-                    <p>ドーナツの種類は、<br class="iphone-apper">何個くらいありますか？</p>
-                </div>
-
-                <div class="A">
-                    <span>A</span>
-                    <p>合計30種類ございます。<br>チョコからスタンダートまで幅広い味をご予約しております。</p>
-                </div>
-            </button>
-        </div>
-    </section>
+    </main>
 
     <footer>
-        <div class="footer__inner">
-            <div class="footer_logo">
-                <img src="./images/donut-logo.png" alt="ロゴ">
-            </div>
+        <div class="footer__Inner">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <h2>Never For Get
+                        <div class="copyright">
+                            <small>© Never For Get. All Rights Reserved.</small>
+                        </div>
+                    </h2>
 
-            <nav class="footer_nav">
-                <ul class="footer__menu">
-                    <li><a href="#Concept">私たちの想い</a></li>
-                    <li><a href="#Commitment">ドーナツへの<br class="iphone-apper">こだわり</a></li>
-                    <li><a href="#Q&A">よくある質問</a></li>
-                </ul>
-            </nav>
+                </div>
+
+                <div class="footer__item">
+                    <a href="#Top">私たちについて</a>
+                    <a href="#Concept">こだわり</a>
+                    <a href="#Features">特徴</a>
+                    <a href="#Products">商品を見る</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>
