@@ -1,0 +1,1077 @@
+@charset "utf-8";
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+全体設定
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+body {
+    width: 100%;
+}
+
+.wrap {
+    width: 100%;
+}
+
+section {
+    margin-bottom: 64px;
+}
+
+main {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media screen and (max-width:768px) {
+        padding: 0 20px;
+    }
+
+    @media screen and (max-width:440px) {
+        padding: 0 10px;
+    }
+}
+
+/*==============================
+font English 
+===============================*/
+.serif {
+    font-family: "goudy-old-style", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.serif_Normal {
+    font-family: "goudy-old-style", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.serif_Nav {
+    font-family: "goudy-old-style", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+/* ==========================
+font japanese 
+=================================*/
+.serif_j {
+    font-family: "ten-mincho-text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Gothic_tit {
+    font-family: "dnp-shuei-gothic-gin-std", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.Gothic {
+    font-family: "dnp-shuei-gothic-gin-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+title
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+.Skill_title_Box,
+.Strengths_title_Box,
+.Background_title_Box,
+.hobbyDesign_title_Box {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-bottom: 64px;
+    width: auto;
+    max-width: 100%;
+}
+
+.Skill_title_Box h2,
+.Strengths_title_Box h2,
+.Background_title_Box h2,
+.hobbyDesign_title_Box h2 {
+    text-align: center;
+    padding: 16px;
+    font-size: clamp(28px, 2vw, 32px);
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+title end
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+text
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.history_Text h3,
+.Skill_Box .design h3,
+.Skill_Box .cord h3 {
+    text-align: center;
+    width: auto;
+    max-width: 100%;
+
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+text end
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+/* ================
+header
+====================== */
+
+header {
+    margin-bottom: 120px;
+
+    @media (max-width:540px) {
+        margin-bottom: 64px;
+    }
+
+}
+
+.headerInner {
+    padding: 24px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    color: #eaf3ff;
+
+    @media (max-width:990px) {
+        padding: 24px 16px;
+    }
+
+    @media (max-width:540px) {
+        height: 60px;
+    }
+}
+
+.headerMv {
+    background: url(../images/portfoilo-toppage-mv.webp) no-repeat center / cover;
+    height: 100px;
+    width: 100%;
+
+    @media (max-width:540px) {
+        height: 60px;
+    }
+}
+
+
+/* スクロールしたらヘッダーメニューのフォントカラー変更 */
+.headerInner.headerColorScroll {
+    color: #ffffff;
+    transition: color 0.4s ease-out;
+    background: rgba(73, 142, 192, 0.938);
+    backdrop-filter: blur(3px);
+}
+
+.headerInner h1 {
+    font-size: clamp(20px, 2vw, 40px);
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+nav
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.navBox {
+    display: flex;
+    list-style: none;
+}
+
+.navBox li {
+    font-size: 20px;
+    margin-left: 56px;
+}
+
+.navBox li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navBox li a:last-child(2) {
+    margin-right: 16px;
+}
+
+/* ================
+nav animation （下線をふわっと）
+====================== */
+
+
+.navBox li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: #f1744f;
+    width: 100%;
+    height: 2px;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s ease-in;
+}
+
+/* ==========================
+nav hover 透明に
+============================= */
+
+.navBox:hover li {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.navBox:hover li:hover {
+    opacity: 1.0;
+}
+
+.navBox li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+ハンバーガーメニュー　スマホ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+@media screen and (min-width:540px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .grovalNav {
+        display: none;
+    }
+
+    .headerInner {
+        flex-direction: unset;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 100%;
+        padding: 24px 16px;
+    }
+
+    /* meau */
+    .menu-wrapper {
+        position: relative;
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 30px;
+        position: fixed;
+        /* ← fixedにして常に左上固定 */
+        top: 11px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 3;
+        display: inline-block;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+
+    /* ハンバーガーがXに変形 */
+    #menu-toggle:checked+.menu-icon span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    #menu-toggle:checked+.menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu-icon span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* オーバーレイ背景 */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s;
+        z-index: 1;
+        height: 100vh;
+    }
+
+    #menu-toggle:checked~.overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* メニュー本体（左から出す） */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* ← 初期位置を左へ */
+        width: 250px;
+        height: 100%;
+        background: #498ec0;
+        box-shadow: 2px 0 8px rgba(65, 62, 62, 0.452);
+        transition: left 0.4s ease;
+        z-index: 2;
+        height: 100vh;
+
+    }
+
+    #menu-toggle:checked~.menu {
+        right: 0;
+        /* ← 開いたときは左0へ */
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 60px 20px;
+    }
+
+    .menu li {
+        margin: 20px 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .menu a:hover {
+        color: #f1744f;
+    }
+
+    /* title */
+    .headerInner h1 {
+        color: #eaf3ff;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+自分について
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+
+.history_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.history_title::before,
+.history_title::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;;
+}
+
+.history_title::before {
+    margin-right: 16px;
+}
+
+.history_title::after {
+    margin-left: 16px;
+}
+
+.strong {
+    color: #f1744f;
+}
+
+.history_Box {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 48px 48px 0;
+
+    @media (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width:768px) {
+        padding: 0 8px;
+    }
+}
+
+.history_Title_Box h2 {
+    text-align: center;
+    width: 100%;
+    font-size: clamp(40px, 2vw, 50px);
+}
+
+.history_Img img {
+    height: auto;
+    max-width: 400px;
+    border-radius: 48px;
+    border: #525252 3px solid;
+
+    @media (max-width:768px) {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+}
+
+
+.history_Text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: 100%;
+
+    @media (max-width:768px) {
+        align-items: center;
+    }
+
+}
+
+
+.history_Text h3 {
+    position: relative;
+    align-self: center;
+}
+
+
+.my_name {
+    font-size: clamp(35px, 2vw, 48px);
+}
+
+.my_name::after {
+    content: "uehara masato";
+    font-size: 16px;
+    white-space: nowrap;
+    position: absolute;
+    color: #f1744f;
+
+    @media screen and (max-width:440px) {
+        white-space: wrap;
+    }
+
+}
+
+.history_Text p {
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.8;
+    letter-spacing: .08rem;
+}
+
+/* ========================
+Strenthgs
+========================== */
+
+.Strengths_Box {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+    @media screen and (max-width:768px) {
+        padding: 30px 20px 40px;
+        margin-bottom: 24px;
+    }
+
+    @media screen and (max-width:440px) {
+        padding: 15px 10px 20px;
+        margin-bottom: 24px;
+    }
+}
+
+.Strengths_Box p {
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.8;
+    letter-spacing: .08rem;
+}
+
+.Strengths_Box .Strengths_1 h3,
+.Strengths_2 h3,
+.Strengths_3 h3 {
+    font-size: clamp(22px, 2vw, 24px);
+    white-space: nowrap;
+    color: #f1744f;
+}
+
+.Strengths_circle img {
+    max-width: 450px;
+    height: auto;
+}
+
+.Strengths_1 {
+    position: relative;
+    max-width: 850px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+    line-height: 1.5;
+    margin-right: auto;
+
+    @media (max-width:540px) {
+        flex-direction: column;
+    }
+}
+
+.Strengths_1_Img {
+    position: absolute;
+    top: -28%;
+    left: -4%;
+    width: clamp(200px, 15vw, 300px);
+    height: auto;
+    opacity: 0.8;
+    z-index: -1;
+
+    @media (max-width:768px) {
+        top: 10%;
+        left: 0%;
+        width: clamp(200px, 10vw, 400px);
+    }
+
+    @media (max-width:540px) {
+        top: -12%;
+        left: 46%;
+        width: clamp(150px, 10vw, 400px);
+    }
+}
+
+.Strengths_1_Img img {
+    display: inline-block;
+    width: clamp(200px, 15vw, 300px);
+    height: auto;
+
+    @media (max-width:768px) {
+        width: clamp(200px, 10vw, 400px);
+    }
+
+    @media (max-width:540px) {
+        width: clamp(150px, 10vw, 400px);
+    }
+
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Notion　ふきだし
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+.bou_Box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bou_Box p {
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.bou_left {
+    background: #000000;
+    width: 2px;
+    height: 2em;
+    margin: 0 1em;
+    margin-top: -2em;
+    vertical-align: middle;
+    transform: rotate(-35deg);
+    align-self: flex-end;
+}
+
+.bou_right {
+    background: #000000;
+    width: 2px;
+    height: 2em;
+    margin: 0 1em;
+    margin-top: -2em;
+    vertical-align: middle;
+    transform: rotate(35deg);
+    align-self: flex-end;
+}
+
+.notion_bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Notion行くようボタン 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
+.notion_button {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 24px;
+
+    @media (max-width:768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    @media (max-width:400px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.notion_design {
+    max-width: 200px;
+    margin-right: auto;
+    display: inline-block;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    border: 3px solid #333;
+    color: #4f9bf1;
+    transition: background-color 0.5s;
+    margin: 0 auto;
+}
+
+.notion_design:hover {
+    background-color: #4f9bf1;
+    color: #ffffff;
+}
+
+.notion_design span {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+}
+
+.notion_cording_A {
+    order: 1;
+
+    @media (max-width:400px) {
+        order: 1;
+    }
+}
+
+.notion_cording_B {
+    order: 3;
+
+    @media (max-width:768px) {
+        order: 2;
+    }
+
+    @media (max-width:400px) {
+        order: 3;
+    }
+}
+
+
+.notion_cording {
+    max-width: 200px;
+    margin-left: auto;
+    display: inline-block;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    border: 3px solid #333;
+    color: #f1744f;
+    transition: background-color 0.5s;
+
+    @media (max-width:400px) {
+        margin: 0 auto;
+    }
+
+}
+
+.notion_cording:hover {
+    background-color: #f1744f;
+    color: #ffffff;
+}
+
+
+.notion_cording span {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+}
+
+.notion_cording_C {
+    order: 2;
+
+
+    @media (max-width:400px) {
+        order: 2;
+    }
+}
+
+.notion_cording_D {
+    order: 4;
+
+
+    @media (max-width:400px) {
+        order: 4;
+    }
+}
+
+.Strengths_2 {
+    position: relative;
+    max-width: 700px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+    line-height: 1.5;
+    margin-left: auto;
+
+    @media (max-width:540px) {
+        flex-direction: column;
+    }
+}
+
+.Strengths_2_Img {
+    position: absolute;
+    top: -18%;
+    left: 50%;
+    transform: rotate(27deg);
+    width: clamp(130px, 10vw, 400px);
+    opacity: 0.9;
+    z-index: -1;
+
+    @media (max-width:768px) {
+        top: -20%;
+        left: 40%;
+    }
+
+    @media (max-width:540px) {
+        top: 10%;
+        left: -10%;
+        transform: rotate(-4deg);
+    }
+
+    @media (max-width:440px) {
+        top: -10%;
+        left: -7%;
+    }
+}
+
+.Strengths_2_Img img {
+    width: clamp(130px, 10vw, 400px);
+    height: auto;
+}
+
+.Strengths_3 {
+    position: relative;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    gap: 24px;
+    line-height: 1.5;
+    margin-right: auto;
+
+    @media (max-width:540px) {
+        flex-direction: column;
+    }
+}
+
+.Strengths_3_Img {
+    position: absolute;
+    top: -14%;
+    left: 0%;
+    transform: rotate(15deg);
+    width: clamp(200px, 15vw, 300px);
+    height: 400px;
+    opacity: 0.9;
+    z-index: -1;
+
+    @media (max-width:768px) {
+        top: -20%;
+        left: 0%;
+        transform: rotate(15deg);
+        width: clamp(200px, 20vw, 300px);
+    }
+
+    @media (max-width:540px) {
+        top: -14%;
+        left: 38%;
+        transform: rotate(10deg);
+        width: clamp(150px, 20vw, 300px);
+    }
+}
+
+
+.Strengths_3_Img img {
+    width: clamp(150px, 15vw, 300px);
+    height: auto;
+}
+
+.pc {
+    display: block;
+
+    @media (max-width:540px) {
+        display: none;
+    }
+}
+
+.iphone {
+    display: none;
+
+    @media (max-width:440px) {
+        display: block;
+    }
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+skill
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.Skill_Box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 100%;
+
+    @media (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width:440px) {
+        padding: 0 20px;
+    }
+}
+
+.Skill_Box p {
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: 1.8;
+    letter-spacing: .08rem;
+}
+
+.Skill_Box h3 {
+    text-align: left;
+    padding: 0 0 0 8px;
+    width: auto;
+    max-width: 100%;
+
+    @media screen and (max-width:440px) {
+        padding: 0 0 0 4px;
+    }
+}
+
+.design h3,
+.cord h3 {
+    font-size: clamp(28px, 2vw, 40px);
+}
+
+
+.design {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    border-right: 1px solid #f1744f;
+    padding: 16px 8px;
+    flex: 1;
+
+    @media (max-width:768px) {
+        gap: 24px;
+        border-right: none;
+        border-bottom: 1px solid #f1744f;
+    }
+
+}
+
+.design {
+    width: auto;
+    max-width: 100%;
+}
+
+.cord {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 16px 8px 16px 16px;
+    flex: 1;
+
+    @media (max-width:768px) {
+        gap: 24px;
+    }
+}
+
+.design_Logo,
+.cord_Logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+
+    @media screen and (max-width:440px) {
+        gap: 8px;
+    }
+}
+
+.design_Logo img,
+.cord_Logo img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝
+design 
+＝＝＝＝＝＝＝＝＝＝＝＝ */
+.hobbyDesign_img_Box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+.iphone {
+    display: none;
+
+    @media (max-width:768px) {
+        display: block;
+    }
+
+}
+
+.hobbyDesign_text_Box {
+    position: relative;
+}
+
+.hobbyDesign_text_Box p {
+    text-align: center;
+}
+
+.hobbyDesign_img_Box img {
+    height: 300px;
+    width: 300px;
+}
+
+/*=========================
+Topへ戻るボタン
+  ========================== */
+.to_Top {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    /* ①ボタンの色と文字の色とサイズ */
+    background-color: #fff;
+    color: #f1744f;
+    font-size: 16px;
+    border: 3px solid #f1744f;
+
+    /* ②ボタンのサイズと角丸 */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    /* ③次に作る上向きの三角と、TOPの文字の位置を揃えるためのcss */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+
+    @media (max-width:440px) {
+        bottom: -60px;
+        width: 60px;
+        height: 60px;
+        font-size: 14px;
+    }
+}
+
+/* ⑦マウスをかざした時に変化する色の指定 */
+.to_Top:hover {
+    background-color: #f1744f;
+    color: #fff;
+}
+
+.to_Top::before {
+    /* ④絶対必要 */
+    content: "";
+    display: block;
+
+    /* ⑤三角のサイズ */
+    width: 10px;
+    height: 10px;
+
+    /* ⑥三角の線と回転角度 */
+    border-top: 2px solid #f1744f;
+    border-right: 2px solid #f1744f;
+    transform: rotate(-45deg);
+    /* ⑩色が変化する時間 */
+    transition: .3s;
+}
+
+/* ⑨マウスをかざした時に変化する色の指定 */
+.to_Top:hover::before {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.to_Top::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #f1744f;
+    border-right: 2px solid #f1744f;
+    transform: rotate(-45deg);
+    margin-bottom: 5px;
+}
+
+
+/* ======================
+footer
+========================== */
+
+footer {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 24px;
+}
+
+
+.copy_title p {
+    text-align: center;
+    color: #ffffff;
+}

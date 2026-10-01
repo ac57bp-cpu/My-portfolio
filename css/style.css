@@ -1,1801 +1,852 @@
-@charset "UTF-8";
-/* ==========================
-    bg
-========================== */
-/* .main {
-  background: url(../images/bg.webp) repeat-y center top / contain;
-} */
+@charset "utf-8";
 
-/* ==========================
-    hero
-========================== */
-.hero {
-  width: auto;
-  height: auto;
-  position: relative;
-}
-
-.wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.swiper {}
-
-.swiper-slide1 img {
-  object-fit: cover;
-  width: 100%;
-  height: 800px;
-  aspect-ratio: 16 / 9;
-  transform: scaleX(-1);
-
-  @media (max-width: 768px) {
-    height: 400px;
-  }
-}
-
-.heroTime img {
-  position: absolute;
-  z-index: 100;
-  width: 110px;
-  height: auto;
-  top: 120px;
-  left: 64px;
-
-  @media (max-width: 768px) {
-    width: 55px;
-    top: 60px;
-    left: 32px;
-  }
-}
-
-.heroCatch {
-  position: absolute;
-  z-index: 100;
-  color: #ffffff;
-  font-size: 64px;
-  font-family: "Kiwi Maru", serif;
-  writing-mode: vertical-rl;
-  top: 120px;
-  left: 240px;
-
-  @media (max-width: 768px) {
-    font-size: 32px;
-    top: 60px;
-    left: 120px;
-  }
-
-  h2:last-child {
-    margin-top: 80px;
-
-    @media (max-width: 768px) {
-      margin-top: 40px;
-    }
-  }
-}
-
-.heroScroll {
-  position: absolute;
-  bottom: 120px;
-  left: 120px;
-  z-index: 100;
-  transform: rotate(90deg);
-  transform-origin: left bottom;
-
-  @media (max-width: 768px) {
-    bottom: 60px;
-    left: 60px;
-  }
-
-  p {
-    position: relative;
-    color: #ffffff;
-    overflow: hidden;
-    width: 120px;
-
-    @media (max-width: 768px) {
-      width: 60px;
-      font-size: 8px;
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background: yellow;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-
-    &::before {
-      height: 1px;
-    }
-
-    &::after {
-      height: 3px;
-      animation-name: scrollAnimation;
-      animation-duration: 2s;
-      animation-timing-function: ease-out;
-      animation-iteration-count: infinite;
-
-      @media (max-width: 768px) {
-        height: 2px;
-      }
-    }
-  }
-}
-
-@keyframes scrollAnimation {
-  0% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  50% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-
-  50.1% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-
-  100% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-}
-
-.inner {
-  width: 80%;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-
-.feature {
-  position: relative;
-  padding: 40px 0 240px;
-  background: #F5FCFF;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../images/Vector.svg) no-repeat center / contain;
-    width: 400px;
-    height: 350px;
-    left: 0;
-    bottom: 0;
-  }
-}
-
-.feature2 {
-  position: relative;
-  padding: 40px 0 240px;
-  background: #F5FCFF;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../images/Vector.svg) no-repeat center / contain;
-    width: 400px;
-    height: 350px;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-.featureTop {
-  max-width: 600px;
-  margin-left: auto;
-}
-
-.featureTop2 {
-  max-width: 600px;
-  margin-right: auto;
-}
-
-.featureImage {
-  position: relative;
-}
-
-.featureImage img {
-  width: 100%;
-  height: auto;
-}
-
-.featureTitle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #F5FCFF;
-  padding: 16px;
-  border-top-right-radius: 16px;
-}
-
-.featureTitle2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: #F5FCFF;
-  padding: 16px;
-  border-top-left-radius: 16px;
-}
-
-.featureText {
-  position: static;
-  z-index: 10;
-  margin-left: 40px;
-}
-
-/* ==========================
-    流れ星
-========================== */
-/* .starrySky {
-  width: 100%;
-  max-width: 1120px;
-  height: auto;
-  background: #000000;
-  display: block;
-  margin: auto;
-} */
-
-#skyCanvas {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-  background: url(../images/starry-sky.jpg) no-repeat center / contain;
-  width: 500px;
-  height: 500px;
-}
-
-/* ==========================
-    施設ページ
-========================== */
-.facilityInner {
-  max-width: 1120px;
-  width: 80%;
-  padding: 240px 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  background: #ffffff;
-
-  @media (max-width: 768px) {
-    padding: 120px 0;
-  }
-}
-
-.facilityTitle {
-  font-family: "Kiwi Maru", serif;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 120px;
-  background: url(../Top_ahirai_PNG/sec_title_back.png) no-repeat center center / cover;
-  padding: 16px;
-
-  @media (max-width: 768px) {
-    font-size: 30px;
-  }
-}
-
-.slider {}
-
-.slide-wrap {}
-
-.swiperSlide {
-  width: 60%;
-  height: auto;
-
-  @media (max-width: 768px) {
+/* ======================
+全体設定
+=========================== */
+body {
     width: 100%;
-  }
 }
 
-.swiperSlide img {
-  width: 60%;
-  height: auto;
-  aspect-ratio: inherit;
-
-  @media (max-width: 768px) {
+.wrap {
     width: 100%;
-  }
 }
 
-.swiperSlide6 img {
-  border-radius: 100px;
-}
+main {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
 
-.facilityCard {
-  padding: 120px 64px;
-  /* overflow: hidden; */
-  position: relative;
-
-  @media (max-width: 768px) {
-    padding: 120px 40px 360px 40px;
-  }
-
-
-}
-
-.facilityCard:nth-child(odd) {
-  @media (max-width: 768px) {}
-}
-
-.facilityCard1 {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/welcome.svg) no-repeat center center / contain;
-    width: 300px;
-    height: 300px;
-    bottom: 120px;
-    left: 64px;
-    opacity: 0.7;
-
-    @media screen and (max-width: 375px) {
-      width: 150px;
-      height: 150px;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
+    @media screen and (max-width:768px) {
+        padding: 0 20px;
     }
 
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 200px;
-      height: 200px;
-      top: 65%;
-      left: 50%;
-      transform: translateX(-50%);
+    @media screen and (max-width:440px) {
+        padding: 0 10px;
     }
+}
 
-    @media(min-width: 501px) and (max-width: 768px) {
-      width: 250px;
-      height: 250px;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+/*==============================
+font English 
+===============================*/
+.serif {
+    font-family: "goudy-old-style", "Roboto Slab", serif;
+    font-weight: 400;
+    font-style: italic;
+}
 
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/bird.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    top: 100%;
-    right: 0;
+.serif_Normal {
+    font-family: "goudy-old-style", "Roboto Slab", serif;
+    font-weight: 600;
+    font-style: normal;
+}
 
-    @media (max-width: 768px) {}
-  } */
+.serif_Nav {
+    font-family: "goudy-old-style", "Roboto Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ==========================
+font japanese 
+=================================*/
+.serif_j {
+    font-family: "ten-mincho-text", "Noto Serif JP", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.serif_tit {
+    font-family: "ten-mincho-text", "Noto Serif JP", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 
-.facilityCardBox1 {
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
+.Gothic_tit {
+    font-family: "dnp-shuei-gothic-gin-std", "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-.facilityCard2 {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/store.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    bottom: 120px;
-    right: 64px;
-    /* opacity: 0.7; */
-
-    @media screen and (max-width: 375px) {
-      width: 200px;
-      height: 200px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 250px;
-      height: 250px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media(min-width: 501px) and (max-width: 768px) {
-      top: 70%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  }
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/wave.svg) no-repeat center center / contain;
-    width: 500px;
-    height: 250px;
-    top: 90%;
-    left: -20%;
-  } */
+.Gothic {
+    font-family: "dnp-shuei-gothic-gin-std", "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.facilityCardBox2 {
-  background-color: #feffd5;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-}
+/* ===============
+header
+=====================*/
 
-.facilityCard3 {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/meshi.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    bottom: 120px;
-    left: 64px;
-    opacity: 0.5;
-
-    @media screen and (max-width: 375px) {
-      width: 150px;
-      height: 150px;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 200px;
-      height: 200px;
-      top: 65%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @media(min-width: 501px) and (max-width: 768px) {
-      width: 250px;
-      height: 250px;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/kamome.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    top: 100%;
-    right: 0;
-  } */
-}
-
-.facilityCardBox3 {
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-}
-
-.facilityCard4 {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/cottage.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    bottom: 120px;
-    right: 64px;
-    opacity: 0.7;
-
-    @media screen and (max-width: 375px) {
-      width: 200px;
-      height: 200px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 200px;
-      height: 200px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media(min-width: 501px) and (max-width: 768px) {
-      width: 200px;
-      height: 200px;
-      top: 70%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  }
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/yasi.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    top: 100%;
-    left: 0;
-  } */
-}
-
-.facilityCardBox4 {
-  background-color: #feffd5;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-}
-
-.facilityCard5 {
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/tento2.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    bottom: 120px;
-    left: 64px;
-    opacity: 0.7;
-
-    @media screen and (max-width: 375px) {
-      width: 150px;
-      height: 150px;
-      top: 60%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 200px;
-      height: 200px;
-      top: 65%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @media(min-width: 501px) and (max-width: 768px) {
-      width: 200px;
-      height: 200px;
-      top: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/moon.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    top: 80%;
-    left: 0;
-  } */
-}
-
-.facilityCardBox5 {
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-}
-
-
-.facilityCard6 {
-  margin-bottom: 120px;
-  position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
-
-  &::before {
-    position: absolute;
-    content: '';
-    background: url(../images/sauna.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    bottom: 120px;
-    right: 64px;
-    opacity: 0.5;
-
-    @media screen and (max-width: 375px) {
-      width: 200px;
-      height: 200px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      width: 250px;
-      height: 250px;
-      top: 60%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-
-    @media(min-width: 501px) and (max-width: 768px) {
-      width: 250px;
-      height: 250px;
-      top: 70%;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  }
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    background: url(../images/stars.svg) no-repeat center center / contain;
-    width: 250px;
-    height: 250px;
-    top: 70%;
-    right: 0;
-  } */
-}
-
-.facilityCardBox6 {
-  background-color: #feffd5;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-}
-
-.slider-wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.slider-wrapper1 {
-  right: -40%;
-
-  @media (max-width: 768px) {
-    left: 0;
-  }
-}
-
-.slider-wrapper2 {}
-
-.slider-wrapper3 {
-  right: -40%;
-
-  @media (max-width: 768px) {
-    left: 0;
-  }
-}
-
-.slider-wrapper4 {}
-
-.slider-wrapper5 {
-  right: -40%;
-
-  @media (max-width: 768px) {
-    left: 0;
-  }
-}
-
-.slider-wrapper6 {}
-
-.facilityCardTexts {
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  align-items: center;
-  max-width: 30%;
-  position: absolute;
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
-
-  @media (max-width: 768px) {
+.headerInner {
     max-width: 100%;
-    width: 80%;
-    gap: 24px;
-  }
-}
-
-.facilityCardTexts1 {
-  text-align: left;
-  left: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 60%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 75%;
-  }
-
-  &::after {
-    /* position: absolute;
-    content: '';
-    width: 100%;
-    aspect-ratio: 1;
-    background: #ffd5d5;
-    z-index: 1;
-    border-radius: 50%;
-    inset: 0;
-    margin: auto; */
-
-    @media (max-width: 768px) {}
-  }
-}
-
-.facilityCardTitleBox1 {
-  position: relative;
-}
-
-.facilityCard1_star {
-  position: absolute;
-  top: -172%;
-  left: 100%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-}
-
-
-.facilityCardTexts2 {
-  text-align: left;
-  right: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 65%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 80%;
-  }
-}
-
-.facilityCardTitleBox2 {
-  position: relative;
-}
-
-.facilityCard2_star {
-  position: absolute;
-  top: -230%;
-  left: -4%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-
-  @media (max-width:420px) {
-    top: -170%;
-  }
-}
-
-.wave {
-  /* background-color: #ffffff;
-  width: 100%;
-  height: 100px;
-  position: relative;
-  z-index: 1; */
-
-  /* svg {
-    width: 100%;
-    height: 250px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    fill: #a4dfff;
-    z-index: 1;
-    opacity: 0.3;
-
-    @media screen and (max-width: 375px) {
-      height: 100px;
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      height: 150px;
-    }
-
-    @media (min-width: 501px) and (max-width: 768px) {
-      height: 200px;
-    }
-  } */
-}
-
-.facilityCardTexts3 {
-  text-align: left;
-  left: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 60%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 75%;
-  }
-
-
-
-
-  &::after {
-    /* position: absolute;
-    content: '';
-    width: 90%;
-    aspect-ratio: 1;
-    background: #feffd5;
-    z-index: 1;
-    clip-path: polygon(50% 0%,
-        61% 35%,
-        98% 35%,
-        68% 57%,
-        79% 91%,
-        50% 70%,
-        21% 91%,
-        32% 57%,
-        2% 35%,
-        39% 35%);
-    inset: 0;
-    margin: auto;
-
-    @media (max-width: 768px) {
-      width: 80%;
-    } */
-  }
-}
-
-.facilityCardTitleBox3 {
-  position: relative;
-}
-
-.facilityCard3_star {
-  position: absolute;
-  top: -252%;
-  right: -160%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-}
-
-.facilityCardTexts4 {
-  text-align: left;
-  right: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 60%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 75%;
-  }
-
-  &::after {
-    /* position: absolute;
-    content: '';
-    width: 100%;
-    aspect-ratio: 1;
-    background: #ffd5d5;
-    z-index: 1;
-    border-radius: 50%;
-    inset: 0;
-    margin: auto; */
-
-    @media screen and (max-width: 375px) {
-      /* width: 80%; */
-    }
-
-    @media (min-width: 376px) and (max-width: 500px) {
-      /* width: 70%; */
-    }
-
-    @media (min-width: 501px) and (max-width: 768px) {
-      /* width: 60%; */
-    }
-  }
-}
-
-.facilityCardTitleBox4 {
-  position: relative;
-}
-
-.facilityCard4_star {
-  position: absolute;
-  top: -238%;
-  right: 106%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-}
-
-
-.facilityCardTexts5 {
-  text-align: left;
-  left: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 60%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 75%;
-  }
-}
-
-.facilityCardTitleBox5 {
-  position: relative;
-}
-
-.facilityCard5_star {
-  position: absolute;
-  top: -260%;
-  right: -10%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-
-  @media screen and (max-width: 440px) {
-    top: -200%;
-  }
-}
-
-.facilityCardTexts6 {
-  text-align: left;
-  right: 64px;
-
-  @media screen and (max-width: 375px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 60%;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 70%;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    left: 50%;
-    transform: translatex(-50%);
-    top: 80%;
-  }
-
-  &::after {
-    /* position: absolute;
-    content: '';
-    width: 90%;
-    aspect-ratio: 1;
-    background: #feffd5;
-    z-index: 1;
-    clip-path: polygon(50% 0%,
-        61% 35%,
-        98% 35%,
-        68% 57%,
-        79% 91%,
-        50% 70%,
-        21% 91%,
-        32% 57%,
-        2% 35%,
-        39% 35%);
-    inset: 0;
-    margin: auto; */
-
-    @media (max-width: 768px) {
-      /* width: 80%; */
-    }
-  }
-}
-
-.facilityCardTitleBox6 {
-  position: relative;
-}
-
-.facilityCard6_star {
-  position: absolute;
-  top: -240%;
-  right: 100%;
-  width: clamp(60px, 8vw, 100px);
-  height: auto;
-}
-
-.facilityCardTitle {
-  font-size: clamp(20px, 2vw, 22px);
-  font-weight: 900;
-  z-index: 100;
-
-  @media screen and (max-width: 375px) {
-    font-size: 16px;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    font-size: 18px;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    font-size: 20px;
-  }
-}
-
-.facilityCardText {
-  font-size: 18px;
-  z-index: 100;
-
-  @media screen and (max-width: 375px) {
-    font-size: 8px;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    font-size: 14px;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    font-size: 16px;
-  }
-}
-
-.facilityMap {
-  padding: 120px 0 0 0;
-  background: #ffffff;
-  color: #000000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  position: relative;
-}
-
-
-.facilityMapTitle {
-  font-size: 32px;
-  font-weight: bold;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-}
-
-.facilityMapImg {
-  background-color: #ffffff;
-  max-width: 1120px;
-}
-
-.facilityMapImg img {
-  width: 100%;
-  height: auto;
-}
-
-/* ==========================
-    予約ページ
-========================== */
-
-/* mv */
-.mvHero {
-  background: url(../images/reservationMvImg.webp) no-repeat top center/cover;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-
-  @media (max-width: 768px) {
-    height: 400px;
-  }
-}
-
-.mvTitle {
-  font-family: "Kiwi Maru", serif;
-  position: absolute;
-  font-size: 32px;
-  font-weight: bold;
-  padding: 8px 40px;
-  background-color: #ffffff;
-  right: 0;
-  bottom: 80px;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-
-  @media screen and (max-width: 375px) {
-    font-size: 16px;
-  }
-
-  @media (min-width: 376px) and (max-width: 500px) {
-    font-size: 20px;
-  }
-
-  @media (min-width: 501px) and (max-width: 768px) {
-    font-size: 24px;
-  }
-}
-
-.reservationInner {
-  padding: 240px 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-items: center;
-  max-width: 1120px;
-  width: 80%;
-  background: #ffffff;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    width: 90%;
-    padding: 120px 0;
-  }
-}
-
-.reservationTitle {
-  font-family: "Kiwi Maru", serif;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 10;
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
-}
-
-.form {
-  width: 100%;
-  border-bottom: 1px solid #000000;
-  padding: 120px 0;
-}
-
-.formBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 24px;
-  max-width: 480px;
-}
-
-.formCard {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 24px;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.formCard span {
-  color: red;
-  font-weight: bold;
-}
-
-.formCard textarea {
-  height: 400px;
-}
-
-.formLabel {
-  margin-left: 16px;
-  border: 4px solid #000000;
-  background: #ffd5d5;
-  border-radius: 8px;
-  flex-shrink: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 76px;
-  padding: 0 20px;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 76px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-}
-
-.formLabel1 {
-  padding: 60px;
-}
-
-.caption {
-  width: 100%;
-  border-bottom: 1px solid #000000;
-  padding: 120px 0;
-}
-
-.captionTitle {
-  /* background: #a4dfff; */
-  /* width: fit-content;
-  margin: 0 auto;
-  padding: 16px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px; */
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(../images/welcome.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
-    left: 0;
-    top: -150%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../images/welcome.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
-    right: 0;
-    top: -150%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-.captionTexts {
-  position: relative;
-  margin: 0 auto;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: #a4dfff;
-  border-radius: 32px;
-  gap: 8px;
-  padding: 16px;
-
-  @media (max-width: 768px) {
-    max-width: 480px;
-  }
-}
-
-.captionTexts svg {
-  position: absolute;
-}
-
-.captionText {
-  font-size: 20px;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.price {
-  border-bottom: 1px solid #000000;
-  padding: 120px 0;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    width: 80%;
-    aspect-ratio: 1;
-    background: #feffd5;
-    z-index: 1;
-    border-radius: 50%;
-    inset: 0;
-    margin: auto;
-  } */
-
-  h3 {
-    position: relative;
-    font-weight: bold;
-    z-index: 10;
-    padding: 24px;
-    margin-left: 32px;
-    width: fit-content;
-    background: #feffd5;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
-
-    @media (max-width: 768px) {
-      font-size: 12px;
-    }
-
-    /* &::before {
-      position: absolute;
-      content: '';
-      background: #a4dfff;
-      width: 8px;
-      height: 60%;
-      left: -16px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 100;
-    } */
-  }
-}
-
-.pTitle {
-  position: relative;
-  margin-bottom: 80px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(../images/tento2.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
-    left: 0;
-    top: -100%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../images/tento2.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
-    right: 0;
-    top: -100%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-.priceTable {
-  position: relative;
-  z-index: 10;
-  padding: 32px;
-  background: #feffd5;
-  border-radius: 32px;
-}
-
-.table {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-
-  @media screen and (max-width: 375px) {
-    font-size: 8px;
-  }
-
-  @media (min-width: 376px) and (max-width: 768px) {
-    font-size: 10px;
-  }
-
-  th {
-    text-align: center;
-    padding: 8px;
-    background: #a4dfff;
-    margin-bottom: 2px;
-
-    @media screen and (max-width: 375px) {
-      padding: 4px;
-    }
-  }
-
-  th:nth-child(1) {
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-  }
-
-  th:nth-child(2) {
-    border-bottom: 3px double #a4dfff;
-  }
-
-  th:nth-child(3) {
-    border-bottom: 3px double #a4dfff;
-  }
-
-  th:nth-child(4) {
-    border-bottom: 3px double #a4dfff;
-  }
-
-  td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 8px;
-
-    @media screen and (max-width: 375px) {
-      padding: 4px;
-    }
-  }
-
-  .tdTitle {
-    background: #a4dfff;
-  }
-
-  .tdTitle:nth-child(1) {
-    border-bottom: 2px solid #ffffff;
-  }
-
-  tbody {
-    background: #ffffff;
-    border-right: 1px solid #a4dfff;
-    border-bottom: 1px solid #a4dfff;
-
-    tr:nth-child(odd) {
-      border-bottom: 1px dotted #a4dfff;
-    }
-
-    tr:nth-child(2) {
-      td:nth-child(1) {
-        border-bottom: 3px double #a4dfff;
-      }
-
-      td:nth-child(2) {
-        border-bottom: 3px double #a4dfff;
-      }
-
-      td:nth-child(3) {
-        border-bottom: 3px double #a4dfff;
-      }
-    }
-  }
-}
-
-.access {
-  width: 100%;
-  border-bottom: 1px solid #000000;
-  padding: 120px 0;
-}
-
-.aTitle {
-  /* background: #a4dfff; */
-  /* width: fit-content;
-  margin: 0 auto;
-  padding: 16px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px; */
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(../images/character.webp) no-repeat center / contain;
-    width: 130px;
-    height: 130px;
-    left: 0;
-    top: -150%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../images/character.webp) no-repeat center / contain;
-    width: 130px;
-    height: 130px;
-    right: 0;
-    top: -150%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-.accessBox {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background: #ffd5d5;
-  padding: 16px;
-  border-radius: 32px;
-  position: relative;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.accessTexts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.accessText {
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.accessTitle {
-  font-weight: bold;
-}
-
-.accessPs {
-  margin-left: 16px;
-}
-
-.accessPbox {
-  @media (max-width: 768px) {
+    margin: 0 auto;
+    padding: 24px 80px;
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.accessP2 {
-  margin-left: 16px;
-}
-
-.accessMapWrap {
-  width: 100%;
-  max-width: 600px;
-}
-
-.accessMap {
-  width: 100%;
-  max-width: 600px;
-  margin: 0;
-  aspect-ratio: 1 / 1;
-  /* border: 1px solid #000000; */
-}
-
-.accessMap iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.faq {
-  padding: 120px 0;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-
-  /* &::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    aspect-ratio: 1;
-    background: #a4dfff;
-    opacity: 0.3;
-    z-index: 1;
-    border-radius: 50%;
-    margin: auto;
-    top: 120px;
-  } */
-}
-
-.fTitle {
-  /* background: #feffd5; */
-  /* width: fit-content;
-  margin: 0 auto;
-  padding: 16px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px; */
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url(../images/meshi.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
+    align-items: center;
+    position: fixed;
+    top: 0;
     left: 0;
-    top: -150%;
+    width: 100%;
+    z-index: 100;
+    color: #eaf3ff;
 
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
+    @media (max-width:990px) {
+        padding: 24px 16px;
     }
-  }
 
-  &::after {
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+
+.headerInner.headerColorScroll {
+    color: #ffffff;
+    transition: color 0.4s ease-out;
+    background: rgba(73, 142, 192, 0.938);
+    backdrop-filter: blur(3px);
+}
+
+.headerInner h1 {
+    font-size: 40px;
+}
+
+/* ================
+nav
+=====================*/
+.navBox {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 80px;
+}
+
+.navBox li {
+    font-size: 20px;
+}
+
+/* ================
+nav animation （下線をふわっと）
+====================== */
+.navBox li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navBox li a::after {
     content: "";
     position: absolute;
-    background: url(../images/meshi.svg) no-repeat center / contain;
-    width: 150px;
-    height: 150px;
-    right: 0;
-    top: -150%;
-
-    @media (max-width: 768px) {
-      width: 100px;
-      height: 100px;
-    }
-  }
-}
-
-.faqBox {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  background: #a4dfff;
-  padding: 32px;
-  border-radius: 32px;
-}
-
-.faq1 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  z-index: 10;
-}
-
-.faq2 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  z-index: 10;
-}
-
-.faq3 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  z-index: 10;
-}
-
-.faqTitle {
-  font-size: 20px;
-  font-weight: bold;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.faqTexts {
-  margin-left: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.faqQ {
-  font-size: 16px;
-  position: relative;
-  cursor: pointer;
-  border-bottom: 1px solid #000000;
-
-  @media screen and (max-width: 375px) {
-    font-size: 8px;
-  }
-
-  @media (min-width: 376px) and (max-width: 768px) {
-    font-size: 10px;
-  }
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: '';
-    top: 1px;
-    right: 0;
-    bottom: 0;
-    width: 12px;
+    left: 0;
+    bottom: -4px;
+    background-color: #f1744f;
+    width: 100%;
     height: 2px;
-    margin: auto;
-    background: #000000;
-  }
-
-  &::after {
-    transform: rotate(-90deg);
-    transition: transform 0.3s;
-  }
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s ease-in;
 }
 
-.faqQ.active::after {
-  transform: rotate(0deg);
+/* ==========================
+nav hover 透明に
+============================= */
+
+.navBox:hover li {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 
-.faqA {
-  display: none;
-  margin-left: 16px;
-  font-size: 16px;
-  font-weight: bold;
+.navBox:hover li:hover {
+    opacity: 1.0;
+}
 
-  @media screen and (max-width: 375px) {
-    font-size: 8px;
-  }
+.navBox li a:hover::after {
+    transform: scale(1, 1);
+}
 
-  @media (min-width: 376px) and (max-width: 768px) {
-    font-size: 10px;
-  }
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+ハンバーガーメニュー　スマホ
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+@media screen and (min-width:540px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-wrapper {
+        display: none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .grovalNav {
+        display: none;
+    }
+
+    .headerInner {
+        flex-direction: unset;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 100%;
+        padding: 32px 16px;
+    }
+
+    /* meau */
+    .menu-wrapper {
+        position: relative;
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 30px;
+        position: fixed;
+        /* ← fixedにして常に左上固定 */
+        top: 23px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 3;
+        display: inline-block;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 4px;
+        margin: 6px 0;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+
+    /* ハンバーガーがXに変形 */
+    #menu-toggle:checked+.menu-icon span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    #menu-toggle:checked+.menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu-icon span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    /* オーバーレイ背景 */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s;
+        z-index: 1;
+        height: 100vh;
+    }
+
+    #menu-toggle:checked~.overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* メニュー本体（左から出す） */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* ← 初期位置を左へ */
+        width: 250px;
+        height: 100%;
+        background: #498ec0;
+        box-shadow: 2px 0 8px rgba(65, 62, 62, 0.452);
+        transition: left 0.4s ease;
+        z-index: 2;
+        height: 100vh;
+    }
+
+    #menu-toggle:checked~.menu {
+        right: 0;
+        /* ← 開いたときは左0へ */
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 60px 20px;
+    }
+
+    .menu li {
+        margin: 20px 0;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .menu a:hover {
+        color: #f1744f;
+    }
+
+    /* title */
+    .headerInner h1 {
+        color: #eaf3ff;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+}
+
+/* ==================
+mv
+====================== */
+.Mv {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 240px;
+
+    @media (max-width:768px) {
+        margin-bottom: 120px;
+    }
+}
+
+.Mvhero {
+    min-height: 100vh;
+    background: url(../images/portfoilo-toppage-mv.webp) center / cover no-repeat;
+    height: 100vh;
+}
+
+/* ===========================
+top svg
+=============================== */
+
+.svgall {
+    position: absolute;
+    top: 40%;
+    left: 78px;
+    z-index: 10;
+    margin: 0;
+
+    @media (max-width:990px) {
+        top: 40%;
+        left: 0;
+        padding: 16px;
+    }
+}
+
+svg.mask {
+    width: 100%;
+    min-width: 280px;
+    max-width: 900px;
+    height: auto;
+    display: block;
+}
+
+
+/* ====================
+svganime 
+=================== */
+
+.cls-1 {
+    fill: #fff;
+}
+
+.cls-2 {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 7px;
+}
+
+.cls-3 {
+    opacity: .8;
+}
+
+/* ======================
+concept
+====================== */
+
+.Concept {
+    width: 1040px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+
+    @media (max-width:768px) {
+        margin-bottom: 64px;
+    }
+}
+
+.Concept h2 {
+    display: flex;
+    text-align: center;
+    font-size: clamp(40px, 8vw, 50px);
+    margin-bottom: 120px;
+
+    @media (max-width:768px) {
+        margin-bottom: 64px;
+    }
+
+}
+
+
+/*  ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+Concept　装飾
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.Concept h2::before,
+.Concept h2::after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;
+    align-self: center;
+}
+
+.Concept h2::before {
+    margin-right: 16px;
+}
+
+.Concept h2::after {
+    margin-left: 16px;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+コンセプト　中身
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.concept_Box {
+    display: flex;
+    gap: 64px;
+    padding: 0 24px;
+}
+
+.concept_Img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    @media screen and (max-width:1035px) {
+        max-width: 250px;
+    }
+
+}
+
+.concept_Img img {
+    width: 100%;
+    height: auto;
+    border-radius: 48px;
+    border: #525252 3px solid;
+}
+
+.concept_Text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Con_text_Box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Con_text_Box p:nth-child(1),
+.Con_text_Box p:nth-child(2) {
+    margin-bottom: 24px;
+}
+
+.iphone {
+    display: none;
+}
+
+.iphone {
+    @media (max-width:440px) {
+        display: block;
+    }
+}
+
+.iphone_hidden {
+    @media (max-width:440px) {
+        display: none;
+    }
+
+}
+
+.concept_Text h3 {
+    color: #f1744f;
+    text-align: center;
+    font-size: clamp(28px, 2vw, 32px);
+    line-height: 1.7;
+    letter-spacing: .08em;
+    margin-bottom: 64px;
+}
+
+.concept_Text p {
+    width: 100%;
+    max-width: 500px;
+    line-height: 2em;
+    letter-spacing: .07em;
+    margin: 0 auto;
+    font-size: clamp(16px, 2vw, 18px);
+
+    @media screen and (max-width:400px) {
+        font-size: 14px;
+    }
+}
+
+.iphone {
+    display: none;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+コンセプト　スマホ用
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+@media screen and (max-width:1035px) {
+    .concept_Box {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .iphone {
+        display: block;
+    }
+}
+
+/* ===========================
+workserea 
+==============================*/
+.works {
+    max-width: 1040px;
+    margin: 0 auto;
+    margin-bottom: 64px;
+}
+
+/* ==============================
+workstitle 
+================================*/
+.works-title {
+    text-align: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 20px 0;
+    margin-bottom: 80px;
+    font-size: clamp(35px, 2vw, 40px);
+    font-weight: 400;
+}
+
+.works_Text_Box {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.works_Text {
+    display: flex;
+    gap: 20px;
+}
+
+/* grid */
+.grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* タブレットの2列レイアウト */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* スマホの1列レイアウト */
+@media screen and (max-width: 645px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* border 行 */
+.grid .card:nth-child(2n-1),
+.grid .card:nth-child(2n) {
+    border-bottom: 1px solid #b4b2b2;
+}
+
+
+.grid .card:nth-last-child(2),
+.grid .card:nth-last-child(3) {
+    border-bottom: none;
+}
+
+.grid .card:nth-child(2n-1) {
+    border-right: 1px solid #b4b2b2;
+}
+
+@media screen and (max-width: 645px) {
+    .grid .card:nth-child(2n-1) {
+        border-right: none;
+    }
+
+    .grid .card:nth-last-child(3) {
+        border-bottom: 1px solid #b4b2b2;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 36px 32px 40px;
+    gap: 14px;
+
+    @media (max-width:440px) {
+        padding: 24px;
+    }
+}
+
+.card_title {
+    text-align: center;
+}
+
+/*======================
+tag
+=========================== */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.card_tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card_desc {
+    text-align: center;
+}
+
+/* ===================
+tag color
+========================== */
+
+.Photo_tag_Box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 64px;
+}
+
+
+/* ===================
+tag color
+========================== */
+
+.tag-a {
+    background-color: #686868;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+.tag-b {
+    background-color: #ffffff;
+    border: 2px solid #525252;
+    color: #000;
+}
+
+.tag-c {
+    background-color: #ffffff;
+    border: 2px solid #525252;
+    color: #000;
+}
+
+.tag-d {
+    background-color: #ffffff;
+    border: 2px solid #525252;
+    color: #000;
+}
+
+
+.tag-e {
+    background-color: #686868;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+.tag-f {
+    background-color: #686868;
+    border: 1px solid #333;
+    color: #ffffff;
+}
+
+/*====================
+img
+====================== */
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.photo_site img {
+    width: 100%;
+    height: auto;
+}
+
+.photo img {
+    width: clamp(250px, 30vw, 400px);
+    object-fit: contain;
+    box-shadow: 10px 16px 24px -7px rgba(0, 0, 128, 0.2);
+    margin-bottom: 16px;
+    height: auto;
+
+    @media (max-width:440px) {
+        margin-bottom: 8px;
+    }
+}
+
+.horror {
+    margin-bottom: 16px;
+}
+
+/*=========================
+もっと見るボタン
+  ========================== */
+.button_area {
+    text-align: center;
+    margin-top: 32px;
+}
+
+#loadMore {
+    font-size: 16px;
+    padding: 15px 50px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+
+    @media (max-width :768px) {
+        font-size: 12px;
+        padding: 15px 25px;
+    }
+}
+
+#loadMore:hover {
+    background: #555;
+}
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+自分の作品を選んだ時、透明に
+ ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+.photo img:hover,
+.photo_site img:hover {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+/*=========================
+Topへ戻るボタン
+  ========================== */
+.to_Top {
+    position: absolute;
+    bottom: -120px;
+    right: 0;
+    /* ①ボタンの色と文字の色とサイズ */
+    background-color: #fff;
+    color: #f1744f;
+    font-size: 16px;
+    border: 3px solid #f1744f;
+
+    /* ②ボタンのサイズと角丸 */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    /* ③次に作る上向きの三角と、TOPの文字の位置を揃えるためのcss */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s;
+
+    @media (max-width:440px) {
+        bottom: -120pxG;
+        width: 60px;
+        height: 60px;
+        font-size: 14px;
+    }
+}
+
+/* ⑦マウスをかざした時に変化する色の指定 */
+.to_Top:hover {
+    background-color: #f1744f;
+    color: #fff;
+}
+
+.to_Top::before {
+    /* ④絶対必要 */
+    content: "";
+    display: block;
+
+    /* ⑤三角のサイズ */
+    width: 10px;
+    height: 10px;
+
+    /* ⑥三角の線と回転角度 */
+    border-top: 2px solid #f1744f;
+    border-right: 2px solid #f1744f;
+    transform: rotate(-45deg);
+    /* ⑩色が変化する時間 */
+    transition: .3s;
+}
+
+/* ⑨マウスをかざした時に変化する色の指定 */
+.to_Top:hover::before {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.to_Top::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #f1744f;
+    border-right: 2px solid #f1744f;
+    transform: rotate(-45deg);
+    margin-bottom: 5px;
+}
+
+/* ===========================
+footer
+=============================== */
+footer {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 24px;
+}
+
+
+.copy_title p {
+    text-align: center;
+    color: #ffffff;
 }

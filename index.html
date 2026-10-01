@@ -1,762 +1,480 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>星ヶ浜キャンプ場</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=Zen+Kaku+Gothic+Antique:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-  <link rel="stylesheet" href="css/Top_style.css">
-  <link rel="stylesheet" href="css/hmenu.css" />
-  <link rel="stylesheet" href="css/event.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/svg+xml" href="images/camp_favicon_need/favicon.svg">
-  <link rel="icon" type="image/png" size="96x96" href="images/camp_favicon_need/android-chrome-96x96.png">
-  <link rel="icon" type="image/png" size="256x256" href="images/camp_favicon_need/android-chrome-256x256.png">
-  <link rel="apple-touch-icon" size="180x180" href="images/camp_favicon_need/apple-touch-icon-180x180.png">
-  <link rel="shortcut icon" href="images/camp_favicon_need/icon-32x32.png">
-  <!-- OGP -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mmm.quo.jp/camp/">
-  <meta property="og:site_name" content="星ヶ浜キャンプ場">
-  <meta property="og:title" content="星ヶ浜キャンプ場">
-  <meta property="og:description" content="山口県光市にある海と星が売りのキャンプ場">
-  <meta property="og:image:alt" content="海と星に包まれた誰でも楽しめるキャンプ場- 星ヶ浜キャンプ場">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="images/portfolio-favicon/favicon96x96.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="images/portfolio-favicon/icon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="images/portfolio-favicon/android-chrome-256x256.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/portfolio-favicon/apple-touch-icon-180x180.png" />
+    <link rel="shortcut icon" href="images/portfolio-favicon/favicon.ico" />
+
+    <!-- OGP -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mmm.quo.jp/portfolio/">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="自分の作品・経歴をまとめたポートフォリオサイト">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
 
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'xwy6mwz',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'bys2oja',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
+
+
 <body>
-  <header>
-    <!--  ロゴ＆ナビゲーション ここに貼り付け-->
-    <div id="top" class="container">
-      <h1 class="logoH1">
-        <a href="index.html"><img src="images/logo_yellow.svg" width="450" height:255 alt="星ヶ浜キャンプ場" /></a>
-      </h1>
-      <button type="button" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="navigation">
-        <ul class="navUl">
-          <li class="navLi"><a href="index.html">この場所について</a></li>
-          <li class="navLi"><a href="facility.html">設備</a></li>
-          <li class="navLi"><a href="index.html#access">アクセス</a></li>
-          <li class="navLi"><a href="event.html">イベント情報</a></li>
-          <li class="navLi navLi5"><a href="reservation.html">予約</a></li>
-        </ul>
-      </nav>
+    <div class="wrap">
+
+        <header>
+            <div class="headerInner js-header">
+                <h1 class="serif">My Portfolio</h1>
+                <nav class="grovalNav">
+                    <ul class="navBox">
+                        <li class="serif_Nav"><a href="./index.html">Top page</a></li>
+                        <li class="serif_Nav"><a href="./works_top.html">My Works</a></li>
+                        <li class="serif_Nav"><a href="./Aboutme.html">About Me</a></li>
+                    </ul>
+                </nav>
+
+                <!--  iphone -->
+                <div class="menu-wrapper">
+                    <input type="checkbox" id="menu-toggle" hidden>
+
+                    <label class="menu-icon" for="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <div class="overlay"></div>
+
+                    <nav class="menu">
+                        <ul>
+                            <li class="serif_Nav"><a href="./index.html">Top</a></li>
+                            <li class="serif_Nav"><a href="./works_top.html">My Works</a></li>
+                            <li class="serif_Nav"><a href="./Aboutme.html">About Me</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div class="Mv">
+            <div class="svgall">
+                <svg class="mask" max-width="910.99" height="248.44" viewBox="0 0 910.99 248.44" id="move">
+                    <defs>
+                        <!-- マスク座標を挿入 -->
+                        <mask id="clipMask">
+
+                            <g id="mask">
+                                <path class="cls-2"
+                                    d="M18.84,16.94c6.33,8,17.67,4.22,17.67,4.22,0,0,18.33-5.44,19.33-5.22" />
+                                <path class="cls-2"
+                                    d="M3.62,38.39c-2.22,9.44,27.89,2.44,27.89,2.44,0,0,40-8.22,42.22-4.89" />
+                                <path class="cls-2" d="M38.17,40.06c19.11,12-24.44,43.56-25.56,43" />
+                                <path class="cls-2" d="M66.39,13.72c2.78.56,8.22,6,8,7.56" />
+                                <path class="cls-2" d="M74.06,4.83c4.67.11,8.89,4.78,9.33,6.78" />
+                                <path class="cls-2" d="M101.51,37.72c3.22,4.11,72.78-9.11,76-5.22" />
+                                <path class="cls-2" d="M122.84,18.5c6.33,1.22,5.67,39.78,4.56,41" />
+                                <path class="cls-2" d="M146.06,11.06c11.11,3.22,8.44,57.22-21.33,68.44" />
+                                <path class="cls-2" d="M165.28,12.5c6.56,1.11,8.56,7.89,8.56,7.89" />
+                                <path class="cls-2" d="M172.95,3.5c3.78.33,9.22,4.67,10,7.22" />
+                                <path class="cls-2" d="M251.06,11.5c21.89,1.11-39.11,54.78-45.89,52.33" />
+                                <path class="cls-2" d="M240.76,38.56c6.92-12.92,6.33,35,3.58,37.58" />
+                                <path class="cls-2" d="M316.34,22.97c5.83-2.33,14.75,12.08,14.42,12.67" />
+                                <path class="cls-2" d="M312.09,64.64c7.83,20.67,62-30.58,62.92-34.92" />
+                                <path class="cls-2" d="M396.03,51.08c1.25,4.25,35.75-13.42,38.5-10.08" />
+                                <path class="cls-2" d="M427.53,42.17c-8.75,5.08-21.83,40.17,5.83,34.58" />
+                                <line class="cls-2" x1="433.95" y1="56" x2="436.87" y2="59.25" />
+                                <line class="cls-2" x1="439.45" y1="50.75" x2="442.2" y2="53.58" />
+                                <path class="cls-2" d="M85.09,161.28c12,6.67-6.67,77.33-44.17,83.67" />
+                                <path class="cls-2" d="M87.09,187.44s19.33,47.17,39.17,52.5" />
+                                <path class="cls-2"
+                                    d="M200.59,184.28c5.33,3.67-13,48.83-31.5,50.17s-7-59.5,27.17-51.17,45.17,50.67-.83,58.17" />
+                                <path class="cls-2" d="M260.42,194.83s-1.17,22.17-8.5,23.33" />
+                                <path class="cls-2" d="M285.26,159.83c6.33-.33,14.83,9.17,15,12.17" />
+                                <path class="cls-2" d="M322.59,192.83c6.17.67,14,14.33,12.33,17.5" />
+                                <path class="cls-2" d="M285.7,183.06h-7.08l1.33,55.08s42.42,12,38.67-12.33" />
+                                <path class="cls-2" d="M365.37,204.06c3,3.44,24,5.33,29.89-.11" />
+                                <path class="cls-2" d="M381.01,196.67c4,1.33-7,26.67-13.5,32.17" />
+                                <path class="cls-2" d="M376.67,218.33s11.67-6.5,10.17,14.83" />
+                                <path class="cls-2" d="M386.51,224.5s13.17-21,18.33-5.5" />
+                                <path class="cls-2" d="M403.34,220.5s-56.83,24.33-6,21.83" />
+                                <path class="cls-2" d="M474.92,163c-4.08-2.58-38.25,6.33-42.67,5.5" />
+                                <path class="cls-2" d="M429.17,177.67s46.17,0,48-1.33" />
+                                <path class="cls-2" d="M437.01,187c-.5,2.83.17,28.33.17,28.33" />
+                                <path class="cls-2" d="M439.17,188c-1.33,1,34.33-1.5,35.17.33" />
+                                <path class="cls-2" d="M473.17,187.83s1.5,25,0,26.33" />
+                                <line class="cls-2" x1="440.01" y1="200.67" x2="470.34" y2="200.33" />
+                                <line class="cls-2" x1="439.17" y1="212" x2="472.17" y2="212.5" />
+                                <path class="cls-2" d="M455.17,166.83c-1.67,2.83.5,67,.67,70" />
+                                <path class="cls-2" d="M432.17,224.5c-3.33.17,34.83-.67,43.67-.17" />
+                                <line class="cls-2" x1="432.34" y1="241.67" x2="472.17" y2="234" />
+                                <path class="cls-2" d="M481.17,182.67s32-2,34.17-1-1,76.83-21.33,57" />
+                                <path class="cls-2" d="M497.67,159.83l-4-.17s13.17,47.67-21,83.67" />
+                                <path class="cls-2"
+                                    d="M536.84,191.33c.33,6,41.17-5.17,43.5.5s10.17,53.83-20.83,32.67" />
+                                <path class="cls-2" d="M562.67,167.67c7.17-.67,17.17,9.67-23,68.17" />
+                                <path class="cls-2" d="M604.01,194c9.33.67,11.83,22.17,11.17,24.5" />
+                                <path class="cls-2" d="M651.17,168.5c17.83-3-3,53.83,6.5,62.17s34.67,8.5,48-18.33" />
+                                <path class="cls-2" d="M739.01,181.83c.67,8.17,50,4.17,58.17-3.83" />
+                                <path class="cls-2" d="M767.34,165.67c7.83-1.17-.33,33.5-22.83,68" />
+                                <path class="cls-2" d="M752.01,221.17c17.17-25.83,62.67-25,40.67-7.5" />
+                                <path class="cls-2" d="M773.51,225.67c3.17,16.5,34.17,10.33,34.17,10.33" />
+                                <path class="cls-2"
+                                    d="M840.17,182.83c11.83,1.67-4.17,46,17.5,44s24.67-72.33,48.83-12.83" />
+                            </g>
+
+                        </mask>
+                    </defs>
+                    <!-- ベース画像 -->
+                    <image xlink:href="svg/text.svg" max-width="100%" height="100%" mask="url(#clipMask)"></image>
+                </svg>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+            <script>
+                var logo = new Vivus('move', {
+                    type: 'oneByOne',
+                    start: 'inViewport',
+                    duration: 300,
+                    start: 'autostart',
+                    forceRender: false,
+                    animTimingFunction: Vivus.EASE_OUT
+                })
+            </script>
+            <div class="Mvhero">
+            </div>
+        </div>
+
+        <main>
+            <section class="Concept">
+                <div class="Concept_title">
+                    <h2 class="serif_Normal"><span style="color: #f1744f;">C</span>oncept</h2>
+                </div>
+
+                <article>
+                    <div class="concept_Box">
+                        <div class="concept_Text">
+                            <h3 class="serif_j">デザインで<br class="iphone">人の心を<br class="iphone">動かしたい</h3>
+
+                            <div class="Con_text_Box">
+                                <p class="Con_text serif_j">
+                                    &nbsp;私のデザインのコンセプトは
+                                </p>
+
+                                <p class="Con_text serif_j">
+                                    『クライアント様の想い・課題を汲み取り<br class="iphone">最善のデザインで生み出す。<br class="iphone">それを見た人の心が動く。』
+                                </p>
+
+                                <p class="Con_text serif_j">
+                                    そんな想いで、デザインをしています。
+                                </p>
+                                <p class="Con_text serif_j">
+                                    そのために、日々学んでいます。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="concept_Img">
+                            <img src="./images/About me/mine.webp" alt="自分の写真">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+
+            <section class="works">
+                <h2 class="works-title , serif_Normal"><span style="color: #f1744f;">W</span>orks
+                </h2>
+                <!-- grid -->
+                <div class="grid">
+
+                    <article class="card card1">
+                        <div class="photo_site">
+                            <a href="./works_website-3_sweat.html">
+                                <img src="./images/sweat/mock-up.png" alt="sweat mock-up">
+                            </a>
+                        </div>
+                        <h3 class="card_title , serif_tit  ">Fashion website</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-f">#Website</span>
+                            <span class="tag tag-d">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc , serif_j">架空のファッションサイトを作成しました。<br>上品なファッションブランドをイメージしました。
+                        </p>
+                    </article>
+
+                    <article class="card card1">
+                        <div class="photo_site">
+                            <a href="./works_website-1_Camp.html">
+                                <img src="./images/camp/camp_mokup.webp" alt="星ヶ浜キャンプ場ホームページモックアップ">
+                            </a>
+                        </div>
+                        <h3 class="card_title , serif_tit  ">星ヶ浜キャンプ場 Webサイト</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-f">#Website</span>
+                            <span class="tag tag-d">#訓練校課題</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc , serif_j">星ヶ浜キャンプ場のHPを作成しました。
+                            <br>チームで作成し、Toppageを担当しました。
+                        </p>
+                    </article>
+
+
+                    <article class="card card1">
+                        <div class="photo_site">
+                            <a href="./works_website-2_Portfoilo.html">
+                                <img src="./images/portfoilo/portfoilo_mokup.webp" alt="portfoilo ホームページモックアップ">
+                            </a>
+                        </div>
+                        <h3 class="card_title , serif_tit">Portfoilo Webサイト</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-f">#Website</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc , serif_j">自分の作品・経歴をまとめた<br>ポートフォリオサイトを作成しました。</p>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_toti-5.html">
+                                <img src="./images/banner/(5) toti banner 5h.webp" alt="土地活用バナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title , serif_tit">土地活用 オンライン相談会 バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc , Gothic">土地活用のオンライン相談会のバナー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_ennzina-4.html">
+                                <img src="./images/banner/(4)ennzina/(4-1)width ennzina banner 8h.webp"
+                                    alt="エンジニアバナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">WEBデザイン求人情報 バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">WEBデザイン求人情報のバナー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_kaki-7-1 men.html">
+                                <img src="./images/banner/(7)kaki/(7-1) kaki men banner 5h.webp" alt="牡蠣フェスタ 男 バナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">広島牡蠣フェスタ バナー広告 男性向け</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">広島牡蠣フェスタ バナー広告を男性向けに作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_kaki women-7-2.html">
+                                <img src="./images/banner/(7)kaki/(7-2) kaki women banner 5h.webp" alt="牡蠣フェスタ 女 バナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">広島牡蠣フェスタ バナー 女性向け</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-d">#訓練校課題</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">広島牡蠣フェスタ バナー広告を女性向けに作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_flyer-3 movie.html">
+                                <img class="horror" src="./images/Flyer/flyer (3-1) movie.webp" alt="映画フライヤー広告 表">
+                                <img src="./images/Flyer/flyer (3-2) movie.webp" alt="映画フライヤー広告 裏">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">オリジナル映画 フライヤー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-e">#flyer</span>
+                            <span class="tag tag-d">#訓練校課題</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">オリジナル映画 フライヤー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_kyoto-8.html">
+                                <img src="./images/banner/(8)kyoto banner 4h.webp" alt="京都紅葉バスツアー バナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">京都紅葉バスツアー バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">京都紅葉バスツアーのバナー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_flyer-2 web it .html">
+                                <img src="./images/Flyer/flyer (1) web it.webp" alt="web フライヤー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">IT・WEBスキル講座 フライヤー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-e">#flyer</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">IT・WEBスキル講座 フライヤー広告を作成しました。</p>
+                    </article>
+
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_flyer-1-campas.html">
+                                <img src="./images/Flyer/flyer  (2) campas.webp" alt="オープンキャンパス フライヤー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">オープンキャンパス フライヤー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-e">#flyer</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">オープンキャンパス フライヤー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_Cafe-1.html">
+                                <img src="./images/banner/(1) cafe banner 8h.webp" alt="カフェバナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">カフェ バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">カフェ スイーツフェアのバナー広告を作成しました。</p>
+                    </article>
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_choco-3.html">
+                                <img src="./images/banner/(3) choco banner 6h.webp" alt="バレンタインバナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">バレンタイン バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">バレンタインバナー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_LUMINO-2.html">
+                                <img src="./images/banner/(2)LUMINO/(2-1) LUMINO banner 20h.webp" alt="クリスマス雑貨バナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">インテリア雑貨 バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">北欧テイストのインテリア雑貨を扱うオンラインストア クリスマスバナー広告を作成しました。</p>
+                    </article>
+
+                    <article class="card">
+                        <div class="photo">
+                            <a href="./works_rinobe-6.html">
+                                <img src="./images/banner/(6)rinobe banner 3h@3x.webp" alt="リノベーションバナー広告">
+                            </a>
+                        </div>
+                        <h3 class="card_title  , serif_tit">ショールーム見学会 バナー広告</h3>
+                        <div class="card_tags">
+                            <span class="tag tag-a">#banner</span>
+                            <span class="tag tag-b">#自主制作</span>
+                            <span class="tag tag-c">#架空</span>
+                        </div>
+                        <p class="card_desc  , serif_j">中古リノベーション ショールーム見学会のバナー広告を作成しました。</p>
+                    </article>
+
+                    <button id="page-top" class="to_Top">TOP</button>
+                </div>
+
+                <div class="button_area">
+                    <button id="loadMore">
+                        <p>他の作品を見る</p>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+
+            <div class="copy_box">
+                <small class="copy_title">
+                    <p class="serif">&copy;2026 UEHARA MASATO</p>
+                </small>
+            </div>
+        </footer>
     </div>
-  </header>
 
-  <!-- ローディング画面 -->
-  <div class="loader">
-    <div class="logo">
-      <img src="./images/logo_yellow.svg" alt="星ヶ浜キャンプ場ロゴ">
-    </div>
-  </div>
-
-  <!-- heroここから-->
-  <section>
-    <div class="hero">
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="images/slider_family2.webp" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/Mv.star.webp" />
-          </div>
-          <div class="swiper-slide"><img src="images/slider_sunset.webp" /></div>
-        </div>
-        <div class="heroScroll">
-          <p>SCROLL</p>
-        </div>
-      </div>
-
-      <div class="hereBox">
-        <div class="heroTime">
-          <img src="images/camp_kikan 1.svg" alt="">
-        </div>
-        <div class="heroCatch">
-          <h2>素敵な時間を</h2>
-          <h2>海と星に包まれて</h2>
-        </div>
-      </div>
-
-      <div class="heroScroll_star">
-        <img src="./images/Hoshigahama_character3-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-      </div>
-
-    </div>
-
-
-  </section>
-  <!-- heroここまで-->
-
-  <main>
-    <div class="inner">
-
-      <!-- 天気予報 -->
-      <section>
-        <div class="weather">
-          <h3> 星ヶ浜キャンプ場 天気予報 </h3>
-          <div id="ww_6d9f6d806e4cb" v='1.3' loc='id'
-            a='{"t":"responsive","lang":"ja","sl_lpl":1,"ids":["wl6935"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-            More forecasts: <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_6d9f6d806e4cb_u"
-              target="_blank">東京
-              天気 10 日間</a></div>
-          <script async src="https://app3.weatherwidget.org/js/?id=ww_6d9f6d806e4cb"></script>
-        </div>
-      </section>
-
-      <!-- イベント -->
-      <section>
-        <div class="event_Inner">
-
-          <div class="event-title">
-            <h2>
-              イベント情報
-            </h2>
-
-            <div class="flag1">
-              <img src="./Top_event_page/event_hata 2.svg" alt="">
-            </div>
-
-            <div class="flag2">
-              <img src="./Top_event_page/event_hata 2.svg" alt="">
-            </div>
-          </div>
-
-
-          <div class="event_Box">
-            <div class="event_Item , zoom-box">
-              <a href="./event.html#section3">
-                <img class="c-bnr zoom" src="./Top_event_page/photo_ banner_square.webp" alt="フォトコンテストバナー">
-              </a>
-            </div>
-
-            <div class="event_Item , zoom-box">
-              <a href="./event.html#section1">
-                <img class="c-bnr zoom" src="./Top_event_page/sauna banner_square.webp" alt="サウナ">
-              </a>
-            </div>
-
-            <div class="event_Item , zoom-box">
-              <a href="./event.html#section2">
-                <img class="c-bnr zoom" src="./Top_event_page/camp_event banner_square.webp" alt="キャンプイベント">
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section>
-        <div class="Concept_Inner">
-
-          <div class="sunset">
-
-            <!-- タイトル -->
-            <div class="Concept_title_BigBox">
-              <div class="Concept_title_Box">
-
-                <div class="Concept_title_1 Concept_title ">
-                  <h3 class="Concept_title_1 inview fadeIn">絶景のキャンプ場</h3>
-                  <div class="Concept_title_1_back">
-                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
-                  </div>
-                </div>
-
-                <div class="Concept_title_2 Concept_title">
-                  <h3 class="Concept_title_2 inview fadeIn">心ほどける</h3>
-                  <div class="Concept_title_2_back">
-                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
-                  </div>
-
-                </div>
-
-                <div class="Concept_title_3 Concept_title">
-                  <h3 class="Concept_title_3 inview fadeIn">瀬戸内海を望む</h3>
-                  <div class="Concept_title_3_back">
-                    <img src="./Top_ahirai_PNG/Rectangle 21.png" alt="">
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- sunset image -->
-              <div class="sunset_img">
-                <div class="blur">
-                  <img src="./Top_Concept/Top_sunset.webp" alt="夕日">
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="sea">
-            <div class="Concept_sea inview fadeIn">
-              <img src="./Top_Concept/Top_sea.webp" alt="海">
-            </div>
-
-            <div class="Concept_text_box">
-              <div class="Concept_texts">
-
-                <div class="Concept_text Concept_text1">
-                  <p>ここは山口県光市安西村にある<br><span class="text_strong">『星ヶ浜キャンプ場』</span></p>
-                </div>
-
-                <div class="Concept_text">
-                  <p>瀬戸内海に臨む日本でも<br class="hoshi">有数の広さを誇る<br>キャンプ場で眺めも抜群</p>
-                </div>
-
-                <div class="Concept_text">
-                  <p>朝日に輝く海 夕暮れに染まる空<br class="hoshi">そして夜空いっぱいに瞬く星々<br class="hidden-pc">
-                    ゆっくりと流れる時間が<br class="hoshi">日常を忘れさせ心を満たしてくれます
-                  </p>
-                </div>
-
-                <div class="Concept_text Concept_text1">
-                  <p>あなたも忘れられない<br>景色に出会いに来ませんか</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="star">
-            <div class="title_star ">
-              <h3>私たちはどんな方でも安心して、<br>
-                楽しめるキャンプ場を<br class="hoshi">目指しております</h3>
-            </div>
-
-            <div class="star_img">
-              <canvas id="skyCanvas" width="950" height="950">
-                <img src="./Top_Concept/star.png" alt="星">
-              </canvas>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <section class="Features ">
-        <div class="Features_title">
-          <div class="Features_star">
-            <img src="./images/Hoshigahama_character6-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-          </div>
-          <h2>星ヶ浜キャンプ場<br class="Features_hidden">の特徴</h2>
-        </div>
-
-
-        <div class="feature  inview fadeIn_right ">
-          <div class="featureTop">
-            <div class="featureImage">
-              <img src="./Top_tokutixyou_webp/family camp 1.webp" alt="特徴セクションキャンプ写真">
-              <h3 class="featureTitle">
-                バラエティに富んだ設備
-              </h3>
-            </div>
-          </div>
-          <div class="featureText">
-            <p>山口市から車で約１時間。</p>
-            <p>車の乗り入れ可能なオートキャンプ場でバラエティ豊かな設備があります。</p>
-            <p>皆様のお越しをお待ちしております。</p>
-          </div>
-          <div class="featureIrasuto">
-            <img src="./Top_tokutixyou_PNG/Top_Concept_tento.png" alt="">
-          </div>
-        </div>
-
-
-        <div class="feature2 inview fadeIn_left ">
-          <div class="featureTop2">
-            <div class="featureImage2">
-              <img src="./Top_tokutixyou_webp/solo 1.webp" alt="">
-              <h3 class="featureTitle2">幅広いニーズに対応</h3>
-            </div>
-          </div>
-          <div class="featureText featureText2">
-            <p>星ケ浜キャンプ場では、ソロでもグループでもお楽しみいただけます。</p>
-            <p>24時間スタッフは常駐しておりますので、困ったことなどはお気軽にお声掛けください。</p>
-          </div>
-          <div class="featureIrasuto2">
-            <img src="./Top_tokutixyou_PNG/Top_Concept_fire.png" alt="">
-          </div>
-
-        </div>
-
-        <div class="feature3 inview fadeIn_right ">
-          <div class="featureTop">
-            <div class="featureImage3">
-              <img src="./Top_tokutixyou_webp/1view.jpeg 1.webp" alt="">
-              <h3 class="featureTitle3">絶景のキャンプ場</h3>
-            </div>
-          </div>
-          <div class="featureText featureText3">
-            <p>星ケ浜キャンプ場は、浜辺に隣接する広々とした開放感と、丁寧に整備された公園のようなオートキャンプ場です。</p>
-            <p>雄大な自然がおりなす波の音を聞きながら、日中は浜辺の下、太陽を浴び、夜は目の前いっぱいに広がる星空の下で、心と体を癒す。</p>
-            <p>そんな非日常の空間を演出します。</p>
-          </div>
-          <div class="featureIrasuto3">
-            <img src="./Top_ahirai/star 1.svg" alt="">
-          </div>
-
-        </div>
-
-
-      </section>
-
-      <section>
-
-        <div class="facility_title">
-
-          <div class="facility_star">
-            <img src="./images/Hoshigahama_character5-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-          </div>
-
-          <h2>主な設備</h2>
-
-        </div>
-
-
-        <div class="facility_back">
-          <div class="facility_box">
-
-            <!-- コテージ -->
-            <div class="facility_item">
-              <div class="facility_img">
-
-                <a href="facility.html#facilityCard4">
-                  <figure class="c-bnr zoom">
-                    <img src="./Top_setubi/cottge.webp" alt="コテージ">
-                  </figure>
-                </a>
-              </div>
-
-              <div class="facility_item_title">
-                <h4>コテージ</h4>
-              </div>
-
-              <div class="facility_item_text">
-                <p> 冷蔵庫・エアコン完備で快適に過ごせる<br>
-                  ロフト付きコテージです。<br>（定員５名）</p>
-              </div>
-            </div>
-
-
-
-            <!-- サウナ -->
-            <div class="facility_item">
-              <div class="facility_img">
-                <figure class="c-bnr zoom">
-                  <a href="facility.html#facilityCard6">
-                    <img src="./Top_setubi/sauna .webp" alt="サウナ">
-                  </a>
-                </figure>
-              </div>
-
-              <div class="facility_item_title">
-                <h4>フィンランド式サウナ</h4>
-              </div>
-
-              <div class="facility_item_text">
-                <p> 本格的なフィンランド式サウナです。<br>セルフロウリュウでお楽しみいただけます。<br>（定員４名）</p>
-              </div>
-
-            </div>
-            <div class="facility_item">
-
-
-
-              <!-- オートキャンプ場　-->
-              <div class="facility_img">
-                <figure class="c-bnr zoom">
-                  <a href="facility.html#facilityCard5">
-                    <img src="./Top_setubi/autocamp.webp" alt="オートキャンプ場">
-                  </a>
-                </figure>
-              </div>
-
-              <div class="facility_item_title">
-                <h4>オートキャンプ場</h4>
-              </div>
-
-              <div class="facility_item_text">
-                <p> テントサイトのすぐ横に車を駐車できる<br>便利で快適なキャンプスタイルです。</p>
-              </div>
-            </div>
-
-
-            <!-- 売店 -->
-            <div class="facility_item">
-
-              <div class="facility_img">
-                <figure class="c-bnr zoom">
-                  <a href="facility.html#facilityCard2">
-                    <img src="./Top_setubi/store.webp" alt="売店">
-                  </a>
-                </figure>
-              </div>
-
-              <div class="facility_item_title">
-                <h4>売店</h4>
-              </div>
-
-              <div class="facility_item_text">
-                <p> キャンプに必要な用品や食料品をご用意しています。<br>
-                  お気軽にお立ち寄りください。</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="button">
-            <a href="facility.html">
-              <p>設備紹介ページへ</p>
-            </a>
-          </div>
-
-        </div>
-
-
-      </section>
-
-
-      <section>
-        <div class="money_title">
-          <div class="money_star">
-            <img src="./images/Hosigahama_character2-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-          </div>
-          <h2>料金表</h2>
-        </div>
-        <div class="price">
-          <h3 class="priceTableTitle">電源付きオートサイト</h3>
-          <div class="priceTable">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>区画</th>
-                  <th>宿泊期間</th>
-                  <th>通常日</th>
-                  <th>通常日以外</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="tdTitle" rowspan="2">オートサイト<br />A/B/C</td>
-                  <td>1区画1泊</td>
-                  <td>4,000円</td>
-                  <td>4,800円</td>
-                </tr>
-                <tr>
-                  <td>1区画 日帰り</td>
-                  <td>2,000円</td>
-                  <td>2,400円</td>
-                </tr>
-                <tr>
-                  <td class="tdTitle" rowspan="2">オートサイト<br />T</td>
-                  <td>1区画1泊</td>
-                  <td>5,200円</td>
-                  <td>6,000円</td>
-                </tr>
-                <tr>
-                  <td>1区画 日帰り</td>
-                  <td>2,600円</td>
-                  <td>3,000円</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-
-      <section>
-        <div class="facilityMap">
-
-          <div class="map_star">
-            <img src="./images/Hoshigahama_character4-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-          </div>
-          <h2 class="facilityMapTitle map_title">キャンプ場 Map</h2>
-
-          <div class="facilityMapImg">
-            <img src="./images/map.webp" alt="マップ">
-            </a>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="access">
-        <div class="access_title">
-          <div class="access_star">
-            <img src="./images/Hoshigahama_character7-01.webp" alt="星ヶ浜キャンプ場キャラクター">
-          </div>
-          <h2>アクセス</h2>
-        </div>
-
-
-        <div class="accessMapWrap">
-          <div class="accessMap">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29446.015158222788!2d131.91059263492477!3d33.97993635260659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3544e20000344917%3A0x5da28270448c6ede!2z44KP44GL44Gw5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1783994620147!5m2!1sja!2sjp"
-              style="border: 0" allowfullscreen="" loading="lazy" -->
-            </iframe>
-          </div>
-        </div>
-
-
-        <div class="access_box">
-
-          <div class="access01_item access01_item_star">
-            <p class="access01_head">本州方面</p>
-            <p class="access01_neck">熊毛IC
-              <span class="yori">より</span>
-              <span class="access_way">車</span>
-              <span class="yori">で</span>
-            </p>
-            <p class="access01_body">
-              約
-              <span class="number">18</span>
-              分
-            </p>
-            <span class="p-access01__notes">
-              （28km）
-            </span>
-          </div>
-
-
-          <div class="access01_item">
-            <p class="access01_head">九州方面</p>
-            <p class="access01_neck">徳山東IC
-              <span class="yori">より</span>
-              <span class="access_way">車</span>
-              <span class="yori">で</span>
-            </p>
-            <p class="access01_body">
-              約
-              <span class="number">13</span>
-              分
-            </p>
-            <span class="p-access01__notes">
-              （11km）
-            </span>
-          </div>
-
-
-          <div class="access01_item">
-            <p class="access01_head">JR山陽本線 </p>
-            <p class="access01_neck">光駅
-              <span class="yori">より</span>
-              <span class="access_way">徒歩</span>
-              <span class="yori">で</span>
-            </p>
-            <p class="access01_body">
-              約
-              <span class="number">11</span>
-              分
-            </p>
-            <span class="p-access01__notes">
-              （1km）
-            </span>
-          </div>
-
-
-          <div class="access01_item access01_item_starleft">
-            <p class="access01_head">山口県</p>
-            <p class="access01_neck">山口市
-              <span class="yori">より</span>
-              <span class="access_way">車</span>
-              <span class="yori">で</span>
-            </p>
-
-            <p class="access01_body">
-              約
-              <span class="number">60</span>
-              分
-            </p>
-            <span class="p-access01__notes">
-              （85km）
-            </span>
-          </div>
-        </div>
-
-
-
-
-        <div class="access_Box">
-
-          <div class="access_Box_Inner">
-
-
-            <div class="access_Inner">
-              <div class="access_heading">
-                <h3>住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所<span class="access_hidden">：</span></h3>
-              </div>
-              <div class="access_text">
-                <p>〒743-0001 ⼭⼝県光市安⻄村2547</p>
-              </div>
-            </div>
-
-            <div class="access_Inner">
-              <div class="access_heading">
-                <h3>電話番号<span class="access_hidden">：</span></h3>
-              </div>
-              <div class="access_text">
-                <p>0833-68-1234</p>
-              </div>
-            </div>
-
-
-            <div class="access_Inner">
-              <div class="access_heading">
-                <h3>営業期間<span class="access_hidden">：</span></h3>
-              </div>
-              <div class="access_text">
-                <p>2026年4⽉26⽇〜11⽉4⽇</p>
-              </div>
-            </div>
-
-
-            <div class="access_Inner">
-              <div class="access_heading">
-                <h3>営業時間<span class="access_hidden">：</span></h3>
-              </div>
-              <div class="access_text">
-
-                <div class="Welcome">
-                  <div>
-                    <p>ウェルカムハウス<br class="access_hidden">(受付・総合案内)</p>
-                  </div>
-
-                  <div>
-                    <p>
-                      9:00〜17:00
-                    </p>
-                  </div>
-                </div>
-
-
-                <div class="store">
-                  <div>
-                    <p>レンタル棟・売店</p>
-                  </div>
-
-                  <div>
-                    <p>
-                      8:30〜17:00
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-    </div>
-  </main>
-
-
-  <footer>
-    <div class="footerInner">
-      <div class="footerContainer">
-        <div class="footerLeft">
-          <h3 class="footerLogoH3">
-            <a href="index.html">
-              <img src="images/logo_yellow.svg" alt="星ヶ浜キャンプ場" />
-            </a>
-          </h3>
-          <div class="footerIcons">
-            <div class="footerIcon1">
-              <a href="#">
-                <img src="./images/insta_icon.svg" alt="インスタ" />
-              </a>
-            </div>
-            <div class="footerIcon2">
-              <a href="#">
-                <img src="./images/line_icon.svg" alt="ライン" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <nav class="footerNav">
-          <ul class="footerNavUl">
-            <li class="footerNavLi">
-              <a href="index.html">この場所について</a>
-            </li>
-            <li class="footerNavLi"><a href="facility.html">設備</a></li>
-            <li class="footerNavLi"><a href="index.html#access">アクセス</a></li>
-            <li class="footerNavLi"><a href="event.html">イベント情報</a></li>
-            <li class="footerNavLi"><a href="reservation.html">予約</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="copyright">
-        <small>&copy; 2026 Hoshigahama Campsite Co., Ltd.</small>
-      </p>
-    </div>
-  </footer>
-
-  <!-- 予約ボタン -->
-  <div id="to_top" class="to_top">
-    <a href="reservation.html">
-      <div class="to_top_image1">
-        <img src="images/character.webp" alt="" />
-      </div>
-      <div class="to_top_image2">
-        <img src="images/Hosigahama_character2-01.webp" alt="" />
-      </div>
-      <div class="to_top_text">
-        <p>ご予約は<br class="hidden-pc">こちら</p>
-      </div>
-    </a>
-  </div>
-
-  <!-- jQuery読み込み -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./js/jquery.inview.min.js"></script>
-  <script src="./js/script.js"></script>
-
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
